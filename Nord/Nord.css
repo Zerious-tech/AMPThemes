@@ -1,0 +1,136 @@
+/* Nord Theme for AMP - https://www.nordtheme.com/
+ *
+ * Polar Night:  #2e3440 #3b4252 #434c5e #4c566a
+ * Snow Storm:   #d8dee9 #e5e9f0 #eceff4
+ * Frost:        #8fbcbb #88c0d0 #81a1c1 #5e81ac
+ * Aurora:       #bf616a #d08770 #ebcb8b #a3be8c #b48ead
+ */
+
+body,
+.bodyTab {
+  background-color: #2e3440;
+}
+#loginContainer,
+.sideItemList {
+  background-color: #2e3440;
+}
+#barTop,
+#userInfo {
+  background-color: #2e3440;
+}
+#sideMenuContainer,
+.subMenuWell,
+#mainBody {
+  background: #2e3440;
+  color: #d8dee9;
+}
+#sideMenu a {
+  font-size: 100%;
+  color: #d8dee9;
+}
+#sideMenu a:active {
+  background-color: #88c0d0;
+}
+#sideMenu a.selected {
+  background-color: #5e81ac;
+  color: #eceff4;
+}
+.button {
+  background-color: transparent;
+  color: #eceff4;
+  font-family: "roboto-light", "Segoe UI Light", "Segoe UI", Calibri, Verdana, Geneva, "DejaVu Sans", sans-serif;
+  font-weight: lighter;
+  font-size: larger;
+  border: 1px solid #5e81ac;
+  min-width: 96px;
+  cursor: pointer;
+  outline: none;
+  height: 48px;
+  margin-right: 8px;
+  transition: background-color 0.3s;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover,
+.button:hover {
+  background-color: #5e81ac;
+}
+button:active,
+input[type=button]:active,
+input[type=submit]:active,
+.button:active {
+  background-color: #81a1c1;
+}
+button span,
+input[type=button] span,
+input[type=submit] span,
+.button span {
+  line-height: 100%;
+}
+button {
+  border: transparent;
+}
+
+.ServerGroup.Online .ServerGroupHeader {
+  background: #5e81ac !important;
+}
+.ServerGroup.Offline .ServerGroupHeader,
+.ServerGroup.Unavailable .ServerGroupHeader {
+  background: #bf616a !important;
+}
+.ServerGroup.Pending .ServerGroupHeader {
+  background: #ebcb8b !important;
+}
+
+.bgGreen {
+  background-color: #5e81ac !important;
+  border: 1px solid #5e81ac !important;
+}
+
+.bgRed {
+  background-color: #bf616a !important;
+  border: 1px solid #bf616a !important;
+}
+
+.ServerEntry.NewServerEntry {
+  background-color: #5e81ac !important;
+  text-align: center;
+}
+
+input[type=text],
+input[type=password],
+input[type=url],
+input[type=number],
+input[type=email],
+input[type=search],
+select,
+.modalpanel {
+  background-color: #3b4252;
+}
+.modalpanel #modaltitle {
+  background-color: #2e3440;
+  padding: 8px 16px;
+  margin: 0;
+}
+textarea {
+  background-color: #2e3440;
+}
+input.searchBox {
+  background-color: transparent;
+}
+.wizardTab .wizardContents {
+  background-color: #3b4252;
+  border-bottom: 8px solid #2e3440;
+}
+.wizardTab .wizardContents h2 {
+  background-color: #2e3440;
+}
+.scheduleTriggerInfo {
+  border: 1px solid #2e3440;
+  background-color: #3b4252;
+}
+.settingsGroup .groupBody .settingContainer {
+  background-color: #3b4252;
+}
