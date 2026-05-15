@@ -1,0 +1,1437 @@
+/* ================================
+   Tumeden Eclipse AMP Theme
+   Custom dashboard design by Tumeden
+   Dark obsidian and cyan interface with a clean Tumeden-style layout
+   ================================ */
+
+/* Base Background - Deep obsidian blue */
+body {
+    background: linear-gradient(180deg, #101923 0%, #070b12 100%);
+}
+
+/* Containers - Clean dark panels */
+#loginContainer,
+.sideItemList,
+#sideMenuContainer,
+#barTop,
+.tabHeaderContainer {
+    background: linear-gradient(180deg, #192a3a 0%, #142333 100%);
+    border-bottom: 1px solid #2f5f73;
+}
+
+.subMenuWell {
+    background: transparent;
+}
+
+@media screen and (max-width: 660px) {
+    #sideMenuContainer .subMenuWell.appear {
+        background: #192a3a;
+    }
+
+    .hiddenOnMobile {
+        display: none !important;
+    }
+}
+
+/* Side Menu - Clean and focused */
+#sideMenuContainer {
+    border-right: 2px solid #2f5f73;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.3);
+}
+
+#sideMenu .heroImage {
+    border-bottom: 2px solid #30d5c8;
+}
+
+.menuTitle {
+    border-bottom: 2px solid #2f5f73;
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: 700;
+    color: #e9fbff;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(180deg, #20364a 0%, #142333 100%);
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#sideMenu a.padBottom {
+    border-bottom: none;
+}
+
+.sideItemList {
+    background: linear-gradient(180deg, #142333 0%, #101b28 100%);
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-left: 1px solid #2f5f73;
+}
+
+#userInfo {
+    border-bottom: 3px solid #30d5c8;
+    background: linear-gradient(180deg, #192a3a 0%, #142333 100%);
+    position: relative;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 16px;
+    overflow: visible;
+    box-shadow: inset 0 -1px 0 rgba(48, 213, 200, 0.08);
+}
+
+#userInfo::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #1aa399 0%, #30d5c8 25%, #e9fbff 50%, #30d5c8 75%, #1aa399 100%);
+    box-shadow: 0 0 8px rgba(48, 213, 200, 0.6), 0 0 16px rgba(48, 213, 200, 0.3);
+}
+
+#userInfo,
+#userInfo a,
+#userInfo span {
+    color: #b7e6ea;
+}
+
+#bgtext {
+    margin-top: auto;
+    padding: 16px 20px;
+    border-top: 1px solid #2f5f73;
+    font-size: 12px;
+    color: #8ccdd8;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Top Bar - Unified header */
+#barTop {
+    border-bottom: 3px solid #30d5c8;
+    background: linear-gradient(180deg, #20364a 0%, #192a3a 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 250px;
+    right: 0;
+    z-index: 100;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0 4px 0;
+    box-sizing: border-box;
+}
+
+#barTop::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #1aa399 0%, #30d5c8 25%, #e9fbff 50%, #30d5c8 75%, #1aa399 100%);
+    box-shadow: 0 0 8px rgba(48, 213, 200, 0.6), 0 0 16px rgba(48, 213, 200, 0.3);
+}
+
+#barTop #tabInfo h2 {
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+#barTop #tabInfo h4 {
+    color: #8ccdd8;
+    margin: 0;
+}
+
+#barTop #tabInfo.remoteInfo h2 {
+    margin: 0;
+}
+
+#barTop #topSearchBox {
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+    margin: 0 32px;
+}
+
+#barTop #topSearchBox input.searchBox {
+    width: 100%;
+    padding: 10px 40px 10px 16px;
+    background: linear-gradient(180deg, #101923 0%, #0c141d 100%);
+    border: 2px solid #2f5f73;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    box-shadow: 0 0 0 1px rgba(48, 213, 200, 0.08);
+    outline: none;
+}
+
+#barTop #topSearchBox input.searchBox::placeholder {
+    color: #6f9eb0;
+}
+
+#barTop #topSearchBox input:focus {
+    background: linear-gradient(180deg, #142333 0%, #101923 100%);
+    border-color: #30d5c8;
+    box-shadow: 0 0 0 1px rgba(48, 213, 200, 0.22), 0 0 10px rgba(48, 213, 200, 0.16);
+}
+
+#barTop #topSearchBox .icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8ccdd8;
+}
+
+@media screen and (max-width: 1000px) {
+    #barTop {
+        left: 0;
+        width: 100%;
+        padding-left: 0;
+    }
+}
+
+/* Main Body */
+#mainBody {
+    background: linear-gradient(180deg, #101923 0%, #070b12 100%);
+    top: 57px;
+}
+
+/* Side Menu Links - Bright cyan accent */
+#sideMenu a {
+    font-size: 100%;
+    color: #b7e6ea;
+    transition: all 0.2s ease;
+}
+
+#sideMenu a:hover {
+    background: linear-gradient(90deg, rgba(48, 213, 200, 0.25) 0%, rgba(48, 213, 200, 0.05) 100%);
+    color: #e9fbff;
+}
+
+#sideMenu a:active {
+    background: linear-gradient(90deg, rgba(48, 213, 200, 0.35) 0%, rgba(48, 213, 200, 0.1) 100%);
+}
+
+#sideMenu a.selected {
+    color: #e9fbff;
+    background: linear-gradient(90deg, rgba(48, 213, 200, 0.3) 0%, rgba(48, 213, 200, 0.05) 100%);
+    border-right: 3px solid #30d5c8;
+    box-shadow: inset 0 0 12px rgba(48, 213, 200, 0.2);
+}
+
+/* Form Inputs - Crisp inset style */
+input[type=text],
+input[type=password],
+input[type=url],
+input[type=number],
+input[type=email],
+input[type=search],
+select,
+textarea,
+.popupTrigger {
+    background: linear-gradient(180deg, #0c141d 0%, #101923 100%);
+    border: 2px solid #2f5f73;
+    border-radius: 6px;
+    color: #ffffff;
+    box-shadow: 0 0 0 1px rgba(48, 213, 200, 0.08);
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=url]:focus,
+input[type=number]:focus,
+input[type=email]:focus,
+input[type=search]:focus,
+select:focus,
+textarea:focus,
+.popupTrigger:focus {
+    border-color: #30d5c8;
+    box-shadow: 0 0 0 1px rgba(48, 213, 200, 0.24), 0 0 10px rgba(48, 213, 200, 0.18);
+}
+
+select option {
+    background: #192a3a;
+    color: #ffffff;
+}
+
+/* Settings Groups - Card style with depth */
+.settingsGroup .groupBody .settingContainer {
+    background: linear-gradient(180deg, #20364a 0%, #192a3a 100%);
+    border: 2px solid #2f5f73;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+}
+
+.settingsGroup:hover .groupBody:hover .settingContainer:hover {
+    border-color: #30d5c8;
+    box-shadow: 0 6px 20px rgba(48, 213, 200, 0.25);
+    transform: translateY(-2px);
+}
+
+.scheduleTriggerInfo {
+    border: 2px solid #2f5f73;
+    background: linear-gradient(180deg, #20364a 0%, #192a3a 100%);
+}
+
+.splitViewInfo.splitViewInfo {
+    background: linear-gradient(180deg, #142333 0%, #101923 100%);
+}
+
+@media screen and (max-width: 1000px) {
+    #sideMenuContainer {
+        background: linear-gradient(180deg, #192a3a 0%, #142333 100%);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #statusActions > div:nth-child(2) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    .DisplayMetricHeader .circleChart {
+        display: none;
+    }
+}
+
+/* App Status - Muted eclipse badge */
+.AppStatus, .listenPort > .AppStatus {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(14, 30, 42, 0.88);
+    border: 1px solid rgba(111, 158, 176, 0.48);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #cfe8ed;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-shadow: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+}
+
+/* Buttons - Dark eclipse controls */
+button,
+input[type=button],
+input[type=submit],
+.button {
+    background: linear-gradient(180deg, #1b3447 0%, #142637 100%) !important;
+    border: 1px solid #2f5f73 !important;
+    color: #e9fbff !important;
+    font-weight: 700;
+    border-radius: 7px;
+    text-shadow: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
+}
+
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover,
+.button:hover {
+    background: linear-gradient(180deg, #20394b 0%, #172c3d 100%) !important;
+    border-color: #3a7486 !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.32);
+    transform: translateY(-1px);
+}
+
+button:active,
+input[type=button]:active,
+input[type=submit]:active,
+.button:active {
+    background: #10202e !important;
+    border-color: #1aa399 !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+    transform: translateY(0);
+}
+
+.tabHeaderContainer .tabHeader.active {
+    background: linear-gradient(180deg, #20364a 0%, #142333 100%) !important;
+    color: #e9fbff !important;
+    border: 1px solid #30d5c8;
+    border-bottom: 3px solid #30d5c8;
+    box-shadow: 0 0 14px rgba(48, 213, 200, 0.22);
+}
+
+.tabHeaderContainer .tabHeader {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, #192a3a 0%, #142333 100%) !important;
+    background-color: transparent !important;
+    background-image: linear-gradient(180deg, #192a3a 0%, #142333 100%) !important;
+    background-size: auto !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    border: 1px solid #2f5f73;
+    color: #b7e6ea !important;
+}
+
+.tabHeaderContainer .tabHeader::before,
+.tabHeaderContainer .tabHeader::after {
+    content: none !important;
+    display: none !important;
+}
+
+.tabHeaderContainer .tabHeader .mat-icon,
+.tabHeaderContainer .tabHeader .icon {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+    min-height: 18px !important;
+    font-size: 18px !important;
+    line-height: 18px !important;
+    opacity: 0.45;
+}
+
+.tabHeaderContainer .tabHeader [class*=Icon],
+.tabHeaderContainer .tabHeader [class*=icon],
+.tabHeaderContainer .tabHeader img,
+.tabHeaderContainer .tabHeader svg {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Color Variants - Crisp state accents */
+.bgBlue {
+    background: linear-gradient(180deg, rgba(61, 130, 189, 0.4) 0%, rgba(34, 91, 139, 0.3) 100%) !important;
+    border: 2px solid #5a9fd4 !important;
+    color: #bfe6ff !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+}
+.bgBlue:hover {
+    background: linear-gradient(180deg, rgba(61, 130, 189, 0.5) 0%, rgba(34, 91, 139, 0.4) 100%) !important;
+    box-shadow: 0 0 12px rgba(90, 159, 212, 0.18);
+}
+
+.bgRed {
+    background: linear-gradient(180deg, rgba(255, 80, 80, 0.35) 0%, rgba(200, 50, 50, 0.25) 100%) !important;
+    border: 2px solid #ff6b6b !important;
+    color: #ffb3b3 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+}
+.bgRed:hover {
+    background: linear-gradient(180deg, rgba(255, 80, 80, 0.5) 0%, rgba(200, 50, 50, 0.4) 100%) !important;
+    box-shadow: 0 0 12px rgba(255, 107, 107, 0.18);
+}
+
+.bgPink {
+    background: linear-gradient(180deg, rgba(48, 213, 200, 0.24) 0%, rgba(26, 163, 153, 0.16) 100%) !important;
+    border: 2px solid #30d5c8 !important;
+    color: #e9fbff !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+}
+.bgPink:hover {
+    background: linear-gradient(180deg, rgba(48, 213, 200, 0.34) 0%, rgba(26, 163, 153, 0.24) 100%) !important;
+}
+
+.bgPurple {
+    background: linear-gradient(180deg, rgba(100, 110, 220, 0.35) 0%, rgba(71, 82, 196, 0.25) 100%) !important;
+    border: 2px solid #7b86e0 !important;
+    color: #c5caff !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+}
+.bgPurple:hover {
+    background: linear-gradient(180deg, rgba(100, 110, 220, 0.5) 0%, rgba(71, 82, 196, 0.4) 100%) !important;
+}
+
+.bgGray {
+    background: linear-gradient(180deg, rgba(100, 120, 150, 0.35) 0%, rgba(80, 100, 130, 0.25) 100%) !important;
+    border: 2px solid #6f9eb0 !important;
+    color: #c5d8e8 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+}
+.bgGray:hover {
+    background: linear-gradient(180deg, rgba(100, 120, 150, 0.5) 0%, rgba(80, 100, 130, 0.4) 100%) !important;
+}
+
+.bgGreen {
+    background: linear-gradient(180deg, rgba(70, 180, 90, 0.35) 0%, rgba(35, 134, 54, 0.25) 100%) !important;
+    border: 2px solid #4ade80 !important;
+    color: #a8ffc0 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+}
+.bgGreen:hover {
+    background: linear-gradient(180deg, rgba(70, 180, 90, 0.5) 0%, rgba(35, 134, 54, 0.4) 100%) !important;
+    box-shadow: 0 0 12px rgba(74, 222, 128, 0.18);
+}
+
+.bgAmber {
+    background: linear-gradient(180deg, rgba(125, 244, 234, 0.22) 0%, rgba(48, 213, 200, 0.25) 100%) !important;
+    border: 2px solid #30d5c8 !important;
+    color: #e9fbff !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+}
+.bgAmber:hover {
+    background: linear-gradient(180deg, rgba(125, 244, 234, 0.34) 0%, rgba(48, 213, 200, 0.4) 100%) !important;
+}
+
+/* Display Metrics - Crisp cards */
+.DisplayMetric {
+    background: linear-gradient(180deg, #20364a 0%, #192a3a 100%);
+    border: 2px solid #2f5f73 !important;
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.25s ease;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+}
+
+.DisplayMetric:hover {
+    border-color: #30d5c8 !important;
+    box-shadow: 0 0 0 1px rgba(48, 213, 200, 0.22), 0 10px 24px rgba(0, 0, 0, 0.32);
+    transform: translateY(-2px);
+}
+
+.DisplayMetric.bgGreen,
+.DisplayMetric.bgBlue,
+.DisplayMetric.bgPurple,
+.DisplayMetric.bgRed,
+.DisplayMetric.bgGray,
+.DisplayMetric.bgAmber {
+    background: linear-gradient(180deg, #20364a 0%, #192a3a 100%) !important;
+    border: 2px solid #2f5f73 !important;
+    color: #b7e6ea !important;
+}
+
+.DisplayMetric.bgGreen {
+    border-left: 6px solid #26d96c !important;
+}
+
+.DisplayMetric.bgBlue {
+    border-left: 6px solid #5a9fd4 !important;
+}
+
+.DisplayMetric.bgPurple {
+    border-left: 6px solid #a35adf !important;
+}
+
+.DisplayMetric.bgRed {
+    border-left: 6px solid #ff6b6b !important;
+}
+
+.DisplayMetric.bgGray,
+.DisplayMetric.bgAmber {
+    border-left: 6px solid #30d5c8 !important;
+}
+
+.DisplayMetric .bgGreen,
+.DisplayMetric .bgBlue,
+.DisplayMetric .bgPurple,
+.DisplayMetric .bgRed,
+.DisplayMetric .bgGray,
+.DisplayMetric .bgAmber {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+#AMP_Core_MetricsDisplay {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.DisplayMetric .DisplayMetricHeader {
+    background: none !important;
+    margin-bottom: 16px;
+    position: relative;
+    min-height: 82px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.DisplayMetric .DisplayMetricGraph {
+    height: 96px;
+    margin-top: 10px;
+}
+
+.DisplayMetricHeader .circleChart {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.DisplayMetric .DisplayMetricHeader > :nth-child(1) {
+    font-size: 12px;
+    font-weight: 700;
+    color: #8ccdd8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    max-width: 62%;
+}
+
+.DisplayMetric .DisplayMetricHeader > :nth-child(2) {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #e9fbff;
+    max-width: 68%;
+    word-break: break-word;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Status Actions - Crisp panels */
+#statusActions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 18px;
+    align-items: stretch;
+}
+
+#statusActions > * {
+    transition: all 0.25s ease;
+}
+
+#statusActions > div {
+    background: linear-gradient(180deg, #20364a 0%, #192a3a 100%);
+    border: 2px solid #2f5f73;
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 150px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+}
+
+#statusActions > div:hover {
+    box-shadow: 0 0 0 1px rgba(48, 213, 200, 0.18), 0 10px 24px rgba(0, 0, 0, 0.32);
+    transform: translateY(-2px);
+}
+
+#statusActions > div > h2 {
+    display: flex;
+    align-items: center;
+    min-height: 28px;
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 2px solid #2f5f73;
+    color: #e9fbff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    background: transparent;
+    margin: -4px 0 16px 0;
+    padding: 0 0 12px 0;
+}
+
+/* Ports - Compact list items */
+#AMP_Core_Ports {
+    width: 100%;
+}
+
+#AMP_Core_Ports > div > .listenPort {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    column-gap: 12px;
+    align-items: center;
+}
+
+.listenPort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    background: linear-gradient(180deg, #142333 0%, #101923 100%);
+    border: 1px solid #2f5f73;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.listenPort:hover {
+    background: linear-gradient(180deg, #1d3446 0%, #132535 100%);
+    border-color: #3a7486;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
+    transform: translateY(-1px);
+}
+
+div[data-viewmodel*="DiagnosticsVM"] > .listenPort > span:nth-child(1) {
+    color: #b7e6ea;
+}
+
+div[data-viewmodel*="DiagnosticsVM"] > .listenPort > span:nth-child(2) {
+    color: #e9fbff;
+    text-shadow: none;
+}
+
+.listenPort > .AppStatus.bgGray {
+    background: rgba(18, 31, 43, 0.9) !important;
+    border: 1px solid rgba(111, 158, 176, 0.5) !important;
+    color: #c5d8e8 !important;
+    box-shadow: none;
+}
+
+.listenPort > .AppStatus.bgRed {
+    background: rgba(46, 18, 24, 0.9) !important;
+    border: 1px solid rgba(255, 107, 107, 0.46) !important;
+    color: #e7b2b2 !important;
+    box-shadow: none;
+}
+
+.listenPort > .AppStatus.bgGreen {
+    background: rgba(14, 38, 26, 0.9) !important;
+    border: 1px solid rgba(74, 222, 128, 0.46) !important;
+    color: #acdcb9 !important;
+    box-shadow: none;
+}
+
+.listenPort > .AppStatus {
+    min-width: 92px;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    line-height: 1;
+    text-shadow: none;
+}
+
+span[data-bind*="text: Name"] {
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+span[data-bind*="text: Port"] {
+    color: #8ccdd8;
+}
+
+span[data-bind*="text: ProtocolName"] {
+    background: rgba(10, 20, 30, 0.82);
+    border: 1px solid rgba(111, 158, 176, 0.46);
+    border-radius: 4px;
+    padding: 5px 8px;
+    min-width: 42px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #b7d9de;
+    text-shadow: none;
+}
+
+/* Instance Action Buttons - Dark eclipse controls */
+.InstanceList .ServerEntry .ServerEntryActions button,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton {
+    background: linear-gradient(180deg, #1b3447 0%, #142637 100%) !important;
+    border: 1px solid #2f5f73 !important;
+    color: #ffffff !important;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.24);
+}
+
+.InstanceList .ServerEntry .ServerEntryActions button:hover,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton:hover {
+    background: linear-gradient(180deg, #20364a 0%, #132536 100%) !important;
+    border-color: #3a7486 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28) !important;
+    transform: translateY(-1px);
+}
+
+.InstanceList .ServerEntry .ServerEntryActions button .mat-icon,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton .mat-icon {
+    color: #b7e6ea !important;
+}
+
+.InstanceList .ServerEntry .ServerEntryActions button:hover .mat-icon,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton:hover .mat-icon {
+    color: #e9fbff !important;
+}
+
+.InstanceList .ServerEntry .ServerEntryActions button.bgRed,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton.bgRed {
+    background: linear-gradient(180deg, #371a22 0%, #271118 100%) !important;
+    border-color: rgba(255, 107, 107, 0.5) !important;
+}
+
+.InstanceList .ServerEntry .ServerEntryActions button.bgGreen,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton.bgGreen {
+    background: linear-gradient(180deg, #143222 0%, #0f2419 100%) !important;
+    border-color: rgba(74, 222, 128, 0.5) !important;
+}
+
+/* Server Groups - Crisp card styling */
+.ServerGroup {
+    background-image: none !important;
+    background: linear-gradient(180deg, #20364a 0%, #142333 100%);
+    border: 2px solid #2f5f73;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.ServerGroup:hover {
+    border-color: #3a7486;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+}
+
+.ServerGroupHeader {
+    background: linear-gradient(180deg, #20364a 0%, #192a3a 100%) !important;
+    border-bottom: 2px solid #2f5f73;
+    border-radius: 10px 10px 0 0;
+}
+
+.ServerGroupActions {
+    border-top: 2px solid #2f5f73;
+    background: linear-gradient(180deg, #142333 0%, #101923 100%) !important;
+    border-radius: 0 0 10px 10px;
+}
+
+.ServerGroupName > span {
+    color: #e9fbff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.SystemInfo {
+    color: #8ccdd8 !important;
+}
+
+.InstanceList .ServerEntry {
+    height: auto !important;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(36, 58, 92, 0.96) 0%, rgba(30, 50, 80, 0.96) 100%) !important;
+    border: 1px solid #2f5f73;
+    border-left-width: 6px;
+    border-left-style: solid;
+    border-left-color: #2f5f73;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28);
+    transition: all 0.25s ease;
+}
+
+.InstanceList .ServerEntry:hover {
+    border-color: #3a7486;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.36);
+    transform: translateY(-2px);
+}
+
+.InstanceList .ServerEntry::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(90deg, rgba(20, 34, 54, 0.22) 0%, rgba(20, 34, 54, 0.72) 46%, rgba(20, 34, 54, 0.9) 100%);
+}
+
+.InstanceList .ServerEntry.bgGreen {
+    border-left-color: #1f8f5a !important;
+}
+
+.InstanceList .ServerEntry:has(.ServerEntryStatus.bgGreen) {
+    border-left-color: #1f8f5a !important;
+}
+
+.InstanceList .ServerEntry.bgGray,
+.InstanceList .ServerEntry.bgInfo {
+    border-left-color: #5a7fa8 !important;
+}
+
+.InstanceList .ServerEntry:has(.ServerEntryStatus.bgGray),
+.InstanceList .ServerEntry:has(.ServerEntryStatus.bgInfo) {
+    border-left-color: #5a7fa8 !important;
+}
+
+.InstanceList .ServerEntry.bgRed {
+    border-left-color: #a84850 !important;
+}
+
+.InstanceList .ServerEntry:has(.ServerEntryStatus.bgRed) {
+    border-left-color: #a84850 !important;
+}
+
+/* New Server Entry - Subtle eclipse prompt */
+.InstanceList .ServerEntry.NewServerEntry {
+    background: linear-gradient(180deg, rgba(18, 43, 55, 0.72) 0%, rgba(12, 24, 34, 0.82) 100%) !important;
+    border: 3px dashed rgba(111, 158, 176, 0.58) !important;
+    border-radius: 12px;
+}
+
+.InstanceList .ServerEntry.NewServerEntry:hover {
+    background: linear-gradient(180deg, rgba(24, 54, 68, 0.82) 0%, rgba(14, 29, 40, 0.9) 100%) !important;
+    border-color: rgba(145, 197, 207, 0.78) !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.32);
+}
+
+.InstanceList .ServerEntry.NewServerEntry .ServerEntryHeader {
+    color: #9bcfd6;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Server Entry - Clean layered row */
+.ServerEntryTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 58px;
+    padding: 10px 14px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(180deg, rgba(42, 68, 104, 0.9) 0%, rgba(36, 58, 92, 0.86) 100%);
+    border-bottom: 1px solid #2f5f73;
+}
+
+h3[data-bind*="text: friendlyname"] {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h5[data-bind*="text: endpoint"] {
+    font-size: 12px;
+    font-family: 'Courier New', monospace;
+    font-weight: 400;
+    color: #8ccdd8;
+}
+
+.ServerEntryStatus.bgGreen {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(14, 38, 26, 0.86);
+    border: 1px solid rgba(74, 222, 128, 0.46);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #acdcb9;
+    box-shadow: none;
+}
+
+.ServerEntryStatus.bgRed {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(46, 18, 24, 0.88);
+    border: 1px solid rgba(255, 107, 107, 0.46);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #e7b2b2;
+    box-shadow: none;
+}
+
+.ServerEntryStatus.bgGray {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(18, 31, 43, 0.88);
+    border: 1px solid rgba(111, 158, 176, 0.52);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #c5d8e8;
+    box-shadow: none;
+}
+
+.ServerEntryStatus.bgInfo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(14, 36, 45, 0.88);
+    border: 1px solid rgba(111, 158, 176, 0.46);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #c6e3e7;
+    box-shadow: none;
+}
+
+.ServerEntryMetrics {
+    padding: 10px 14px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(96px, 1fr));
+    gap: 8px;
+    background: linear-gradient(180deg, rgba(30, 50, 80, 0.95) 0%, rgba(26, 45, 74, 0.9) 100%);
+}
+
+.InstanceList .ServerEntry .ServerEntryInfo {
+    padding: 0 !important;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(180deg, rgba(30, 50, 80, 0.98) 0%, rgba(26, 45, 74, 0.96) 100%);
+    border-top: 1px solid #2f5f73;
+}
+
+.InstanceList .ServerEntry .ServerEntryInfo h2,
+.InstanceList .ServerEntry .ServerEntryInfo h4 {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.InstanceList .ServerEntry .ServerEntryInfo p {
+    color: #b7e6ea !important;
+}
+
+.InstanceList .ServerEntry .ServerEntryActions {
+    margin: 0 !important;
+    margin-top: 0 !important;
+    position: static !important;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 14px;
+    min-height: 54px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(61, 90, 128, 0.45);
+    z-index: 2;
+    background: linear-gradient(180deg, rgba(30, 50, 80, 0.98) 0%, rgba(26, 45, 74, 0.96) 100%);
+}
+
+.InstanceList .ServerEntry .ServerEntryInfo p,
+.InstanceList .ServerEntry .ServerEntryInfo .Notice {
+    background: linear-gradient(180deg, rgba(26, 45, 74, 0.8) 0%, rgba(21, 37, 56, 0.7) 100%) !important;
+    border: 1px solid #2f5f73;
+    color: #b7e6ea !important;
+    border-radius: 8px;
+    margin: 8px 12px !important;
+    padding: 10px 12px !important;
+    line-height: 1.4;
+    text-shadow: none;
+}
+
+.InstanceList .ServerEntry .ServerEntryMetrics {
+    text-align: center;
+    background: linear-gradient(180deg, rgba(30, 50, 80, 0.98) 0%, rgba(26, 45, 74, 0.96) 100%) !important;
+    border-top: 1px solid #2f5f73;
+    padding: 10px 14px;
+    position: relative;
+    z-index: 2;
+}
+
+.InstanceList .ServerEntry .ServerEntryMetrics .ServerEntryMetric {
+    flex-direction: column;
+    background: rgba(10, 18, 30, 0.78) !important;
+    border: 1px solid rgba(61, 90, 128, 0.45);
+    border-radius: 8px;
+    padding: 8px 10px;
+    box-sizing: border-box;
+}
+
+.InstanceList .ServerEntry .ServerEntryMetrics .ServerEntryMetric .mat-icon {
+    margin: 0 !important;
+    color: #5fb8b5 !important;
+    filter: none;
+}
+
+.InstanceList .ServerEntry .ServerEntryMetrics .ServerEntryMetric .MetricText h3 {
+    font-size: 11px;
+    font-weight: 600;
+    color: #8ccdd8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+    text-shadow: none;
+}
+
+.InstanceList .ServerEntry .ServerEntryMetrics .ServerEntryMetric .MetricText .MetricValue {
+    font-weight: 700;
+    color: #ffffff !important;
+    text-shadow: none;
+}
+
+.InstanceList .ServerEntry .ServerEntryImage {
+    filter: saturate(0.86) brightness(0.74) contrast(0.95) !important;
+    opacity: 0.62;
+}
+
+.InstanceList .ServerEntry .ServerEntryImage.Blur {
+    filter: blur(12px) saturate(0.86) brightness(0.68) contrast(0.95) !important;
+}
+
+.InstanceList .ServerEntry .ServerEntryActions button,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    min-height: 38px;
+    padding: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* File Manager - Clean hierarchy */
+#fileManagerList {
+    background: linear-gradient(180deg, #192a3a 0%, #142333 100%);
+    border: 2px solid #2f5f73;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.fileManagerEntry {
+    border-bottom: 1px solid #2f5f73 !important;
+}
+
+.fileManagerEntry:hover {
+    background: linear-gradient(90deg, rgba(48, 213, 200, 0.15) 0%, transparent 100%) !important;
+}
+
+.fileManagerEntry.selected {
+    background: linear-gradient(90deg, rgba(48, 213, 200, 0.25) 0%, rgba(48, 213, 200, 0.05) 100%) !important;
+    border-left: 4px solid #30d5c8 !important;
+}
+
+.fileEntryTitle {
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.fileManagerEntry .fileEntrySubtitle {
+    color: #8ccdd8 !important;
+}
+
+.fmPathSegment {
+    color: #8ccdd8;
+}
+
+.fmPathSegment:hover {
+    color: #e9fbff;
+    text-shadow: none;
+}
+
+.fmPathSegment + .fmPathSegment::before {
+    color: #3a7486;
+}
+
+#fileManagerInfo {
+    background: linear-gradient(180deg, #192a3a 0%, #142333 100%);
+    border: 2px solid #2f5f73;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#fileManagerInfo h3 {
+    color: #e9fbff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#fileManagerInfo th {
+    color: #8ccdd8;
+}
+
+#fileManagerInfo td {
+    color: #ffffff;
+}
+
+/* Code Editor */
+#editorContainer {
+    border-top: 2px solid #2f5f73;
+}
+
+.ace-ambiance .ace_gutter {
+    background: linear-gradient(90deg, #101923 0%, #142333 100%) !important;
+    border-right: 2px solid #2f5f73 !important;
+}
+
+.ace_folding-enabled > .ace_gutter-cell {
+    color: #8ccdd8 !important;
+}
+
+/* Context Menu - Dark surface */
+.contextMenu.contextMenu {
+    border-radius: 12px;
+    background: linear-gradient(180deg, #20364a 0%, #192a3a 100%) !important;
+    border: 2px solid #2f5f73 !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.wizardTab .wizardContents h2 {
+    background: linear-gradient(180deg, #142333 0%, #101923 100%) !important;
+    border-bottom: 2px solid #2f5f73;
+    color: #e9fbff;
+}
+
+.contextMenu.contextMenu .flexButtonGroup {
+    background: linear-gradient(180deg, #192a3a 0%, #142333 100%);
+}
+
+/* Datastore - Crisp cards */
+.datastoreItem {
+    background: linear-gradient(180deg, #20364a 0%, #192a3a 100%) !important;
+    border: 2px solid #2f5f73 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+}
+
+.datastoreItem h3 {
+    border-bottom: 2px solid #2f5f73;
+    color: #e9fbff;
+    background: linear-gradient(180deg, rgba(48, 213, 200, 0.1) 0%, transparent 100%);
+}
+
+.datastoreItem:hover {
+    border-color: #30d5c8 !important;
+    box-shadow: 0 8px 24px rgba(48, 213, 200, 0.2) !important;
+    transform: translateY(-2px);
+}
+
+.wizardTab .wizardContents {
+    background: linear-gradient(180deg, #192a3a 0%, #142333 100%) !important;
+    border: 2px solid #2f5f73 !important;
+}
+
+/* Schedule */
+.scheduleTriggerInfo {
+    background: linear-gradient(180deg, #20364a 0%, #192a3a 100%) !important;
+    border: 2px solid #2f5f73 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.scheduleTriggerInfo:hover {
+    border-color: #30d5c8 !important;
+    box-shadow: 0 8px 24px rgba(48, 213, 200, 0.2) !important;
+}
+
+.scheduleTriggerDescription {
+    background: linear-gradient(180deg, #142333 0%, #101923 100%) !important;
+    border-bottom: 2px solid #2f5f73;
+}
+
+.scheduleTriggerHeaderItem .scheduleHeader {
+    color: #e9fbff;
+}
+
+.scheduleTriggerTask {
+    border-bottom: 1px solid #2f5f73;
+}
+
+/* Links - Cyan accent */
+a {
+    color: #30d5c8;
+    text-shadow: 0 0 0 transparent;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: #e9fbff;
+    text-shadow: none;
+}
+
+/* Scrollbar - Cyan styled */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(90deg, #101923 0%, #142333 100%);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #3a7486 0%, #2f5f73 100%);
+    border-radius: 5px;
+    border: 2px solid #101923;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #30d5c8 0%, #1aa399 100%);
+}
+
+/* Eclipse tone-down: state and control overrides */
+.InstanceList .ServerEntry.bgGreen,
+.InstanceList .ServerEntry:has(.ServerEntryStatus.bgGreen) {
+    border-left-color: #4f7f79 !important;
+}
+
+.InstanceList .ServerEntry.bgRed,
+.InstanceList .ServerEntry:has(.ServerEntryStatus.bgRed) {
+    border-left-color: #8d565d !important;
+}
+
+.ServerEntryStatus.bgGreen,
+.listenPort > .AppStatus.bgGreen {
+    background: linear-gradient(180deg, rgba(19, 44, 43, 0.92) 0%, rgba(11, 28, 29, 0.94) 100%) !important;
+    border-color: rgba(92, 141, 134, 0.72) !important;
+    color: #c0d8d4 !important;
+    box-shadow: inset 0 0 0 1px rgba(190, 224, 218, 0.04) !important;
+}
+
+.ServerEntryStatus.bgRed,
+.listenPort > .AppStatus.bgRed {
+    background: linear-gradient(180deg, rgba(50, 25, 29, 0.94) 0%, rgba(31, 16, 20, 0.96) 100%) !important;
+    border-color: rgba(142, 82, 91, 0.72) !important;
+    color: #d7b3b5 !important;
+    box-shadow: inset 0 0 0 1px rgba(236, 190, 190, 0.04) !important;
+}
+
+.InstanceList .ServerEntry .ServerEntryActions button.bgGreen,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton.bgGreen,
+.InstanceList .ServerEntry .ServerEntryActions button.bgGreen:hover,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton.bgGreen:hover {
+    background: linear-gradient(180deg, #162f31 0%, #0d2022 100%) !important;
+    border-color: rgba(92, 141, 134, 0.74) !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+.InstanceList .ServerEntry .ServerEntryActions button.bgRed,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton.bgRed,
+.InstanceList .ServerEntry .ServerEntryActions button.bgRed:hover,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton.bgRed:hover {
+    background: linear-gradient(180deg, #351d23 0%, #211319 100%) !important;
+    border-color: rgba(142, 82, 91, 0.74) !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+.InstanceList .ServerEntry .ServerEntryActions button,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton {
+    background: linear-gradient(180deg, #152b38 0%, #0f1d29 100%) !important;
+    border-color: rgba(91, 128, 144, 0.58) !important;
+}
+
+.InstanceList .ServerEntry .ServerEntryActions button:hover,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton:hover {
+    background: linear-gradient(180deg, #1a3441 0%, #112331 100%) !important;
+    border-color: rgba(118, 158, 170, 0.72) !important;
+}
+
+.InstanceList .ServerEntry .ServerEntryActions button .mat-icon,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton .mat-icon,
+.InstanceList .ServerEntry .ServerEntryActions button:hover .mat-icon,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton:hover .mat-icon {
+    color: #a8c8cb !important;
+}
+
+.InstanceList .ServerEntry .ServerEntryActions button.bgGreen .mat-icon,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton.bgGreen .mat-icon {
+    color: #b8d1ca !important;
+}
+
+.InstanceList .ServerEntry .ServerEntryActions button.bgRed .mat-icon,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton.bgRed .mat-icon {
+    color: #d5b4b7 !important;
+}
+
+.InstanceList .ServerEntry .ServerEntryMetrics .ServerEntryMetric .mat-icon {
+    color: #7ea7aa !important;
+}
+
+.InstanceList .ServerEntry .ServerEntryMetrics .ServerEntryMetric .MetricText h3 {
+    color: #96bac0 !important;
+}
+
+button.bgGreen,
+input.bgGreen,
+a.bgGreen,
+.button.bgGreen,
+.bgGreen.button {
+    background: linear-gradient(180deg, #162f31 0%, #0d2022 100%) !important;
+    border-color: rgba(92, 141, 134, 0.74) !important;
+    color: #c0d8d4 !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+button.bgGreen:hover,
+input.bgGreen:hover,
+a.bgGreen:hover,
+.button.bgGreen:hover,
+.bgGreen.button:hover {
+    background: linear-gradient(180deg, #1b3939 0%, #102729 100%) !important;
+    border-color: rgba(120, 162, 156, 0.82) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.34) !important;
+}
+
+button.bgRed,
+input.bgRed,
+a.bgRed,
+.button.bgRed,
+.bgRed.button {
+    background: linear-gradient(180deg, #351d23 0%, #211319 100%) !important;
+    border-color: rgba(142, 82, 91, 0.74) !important;
+    color: #d7b3b5 !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+button.bgRed:hover,
+input.bgRed:hover,
+a.bgRed:hover,
+.button.bgRed:hover,
+.bgRed.button:hover {
+    background: linear-gradient(180deg, #43242b 0%, #29161c 100%) !important;
+    border-color: rgba(164, 100, 109, 0.82) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.34) !important;
+}
+
+/* Eclipse flare pass: controlled state glow and stable card hover */
+.InstanceList .ServerEntry {
+    background-color: #1e3250 !important;
+    background-image: linear-gradient(180deg, rgba(36, 58, 92, 0.96) 0%, rgba(30, 50, 80, 0.96) 100%) !important;
+    transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease !important;
+    will-change: transform;
+}
+
+.InstanceList .ServerEntry:hover {
+    background-color: #1e3250 !important;
+    background-image: linear-gradient(180deg, rgba(36, 58, 92, 0.96) 0%, rgba(30, 50, 80, 0.96) 100%) !important;
+    border-color: #3a7486 !important;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.36) !important;
+}
+
+.InstanceList .ServerEntry::before,
+.InstanceList .ServerEntry:hover::before {
+    opacity: 1 !important;
+    background: linear-gradient(90deg, rgba(20, 34, 54, 0.22) 0%, rgba(20, 34, 54, 0.72) 46%, rgba(20, 34, 54, 0.9) 100%) !important;
+    transition: none !important;
+}
+
+.InstanceList .ServerEntry.bgGreen,
+.InstanceList .ServerEntry:has(.ServerEntryStatus.bgGreen) {
+    border-left-color: #65bdb1 !important;
+    box-shadow: inset 5px 0 12px rgba(85, 188, 176, 0.22), 0 4px 14px rgba(0, 0, 0, 0.28) !important;
+}
+
+.InstanceList .ServerEntry.bgGreen:hover,
+.InstanceList .ServerEntry:has(.ServerEntryStatus.bgGreen):hover {
+    box-shadow: inset 5px 0 14px rgba(85, 188, 176, 0.3), 0 8px 22px rgba(0, 0, 0, 0.36) !important;
+}
+
+.InstanceList .ServerEntry.bgRed,
+.InstanceList .ServerEntry:has(.ServerEntryStatus.bgRed) {
+    border-left-color: #b36a72 !important;
+    box-shadow: inset 5px 0 12px rgba(194, 95, 107, 0.2), 0 4px 14px rgba(0, 0, 0, 0.28) !important;
+}
+
+.InstanceList .ServerEntry.bgRed:hover,
+.InstanceList .ServerEntry:has(.ServerEntryStatus.bgRed):hover {
+    box-shadow: inset 5px 0 14px rgba(194, 95, 107, 0.28), 0 8px 22px rgba(0, 0, 0, 0.36) !important;
+}
+
+.ServerEntryStatus.bgGreen,
+.listenPort > .AppStatus.bgGreen {
+    background: linear-gradient(180deg, rgba(20, 58, 55, 0.94) 0%, rgba(10, 32, 33, 0.96) 100%) !important;
+    border-color: rgba(101, 189, 177, 0.86) !important;
+    color: #d9fff8 !important;
+    box-shadow: inset 0 -2px 0 rgba(101, 189, 177, 0.22), 0 0 10px rgba(72, 198, 181, 0.18) !important;
+}
+
+.ServerEntryStatus.bgRed,
+.listenPort > .AppStatus.bgRed {
+    background: linear-gradient(180deg, rgba(62, 30, 35, 0.95) 0%, rgba(34, 17, 22, 0.97) 100%) !important;
+    border-color: rgba(179, 106, 114, 0.86) !important;
+    color: #ffd2d5 !important;
+    box-shadow: inset 0 -2px 0 rgba(179, 106, 114, 0.22), 0 0 10px rgba(194, 95, 107, 0.16) !important;
+}
