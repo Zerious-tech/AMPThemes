@@ -1,0 +1,1226 @@
+/* ================================
+   Tumeden Quest AMP Theme
+   Custom dashboard design by Tumeden
+   Dark blue and gold interface with a fantasy-inspired look
+   ================================ */
+
+/* Base Background - Rich navy with subtle warmth */
+body {
+    background: linear-gradient(180deg, #1a2d4a 0%, #0f1c2e 100%);
+}
+
+/* Containers - Lighter, more visible panels */
+#loginContainer,
+.sideItemList,
+#sideMenuContainer,
+#barTop,
+.tabHeaderContainer {
+    background: linear-gradient(180deg, #243a5c 0%, #1e3250 100%);
+    border-bottom: 1px solid #3d5a80;
+}
+
+.subMenuWell {
+    background: transparent;
+}
+
+@media screen and (max-width: 660px) {
+    #sideMenuContainer .subMenuWell.appear {
+        background: #243a5c;
+    }
+
+    .hiddenOnMobile {
+        display: none !important;
+    }
+}
+
+/* Side Menu - Warm and inviting */
+#sideMenuContainer {
+    border-right: 2px solid #3d5a80;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.3);
+}
+
+#sideMenu .heroImage {
+    border-bottom: 2px solid #edb548;
+}
+
+.menuTitle {
+    border-bottom: 2px solid #3d5a80;
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffe98d;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(180deg, #2a4468 0%, #1e3250 100%);
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#sideMenu a.padBottom {
+    border-bottom: none;
+}
+
+.sideItemList {
+    background: linear-gradient(180deg, #1e3250 0%, #182840 100%);
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-left: 1px solid #3d5a80;
+}
+
+#userInfo {
+    border-bottom: 3px solid #edb548;
+    background: linear-gradient(180deg, #243a5c 0%, #1e3250 100%);
+    position: relative;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 16px;
+    overflow: visible;
+    box-shadow: inset 0 -1px 0 rgba(237, 181, 72, 0.08);
+}
+
+#userInfo::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #d4a23c 0%, #edb548 25%, #ffe98d 50%, #edb548 75%, #d4a23c 100%);
+    box-shadow: 0 0 8px rgba(237, 181, 72, 0.6), 0 0 16px rgba(237, 181, 72, 0.3);
+}
+
+#userInfo,
+#userInfo a,
+#userInfo span {
+    color: #b7d4e8;
+}
+
+#bgtext {
+    margin-top: auto;
+    padding: 16px 20px;
+    border-top: 1px solid #3d5a80;
+    font-size: 12px;
+    color: #8fb8d9;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Top Bar - Prominent header */
+#barTop {
+    border-bottom: 3px solid #edb548;
+    background: linear-gradient(180deg, #2a4468 0%, #243a5c 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 250px;
+    right: 0;
+    z-index: 100;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0 4px 0;
+    box-sizing: border-box;
+}
+
+#barTop::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #d4a23c 0%, #edb548 25%, #ffe98d 50%, #edb548 75%, #d4a23c 100%);
+    box-shadow: 0 0 8px rgba(237, 181, 72, 0.6), 0 0 16px rgba(237, 181, 72, 0.3);
+}
+
+#barTop #tabInfo h2 {
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+#barTop #tabInfo h4 {
+    color: #8fb8d9;
+    margin: 0;
+}
+
+#barTop #tabInfo.remoteInfo h2 {
+    margin: 0;
+}
+
+#barTop #topSearchBox {
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+    margin: 0 32px;
+}
+
+#barTop #topSearchBox input.searchBox {
+    width: 100%;
+    padding: 10px 40px 10px 16px;
+    background: linear-gradient(180deg, #1a2d4a 0%, #152538 100%);
+    border: 2px solid #3d5a80;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+#barTop #topSearchBox input.searchBox::placeholder {
+    color: #6a8aa8;
+}
+
+#barTop #topSearchBox input:focus {
+    background: linear-gradient(180deg, #1e3250 0%, #1a2d4a 100%);
+    border-color: #edb548;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3), 0 0 8px rgba(237, 181, 72, 0.4);
+}
+
+#barTop #topSearchBox .icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8fb8d9;
+}
+
+@media screen and (max-width: 1000px) {
+    #barTop {
+        left: 0;
+        width: 100%;
+        padding-left: 0;
+    }
+}
+
+/* Main Body */
+#mainBody {
+    background: linear-gradient(180deg, #1a2d4a 0%, #0f1c2e 100%);
+    top: 57px;
+}
+
+/* Side Menu Links - Vibrant gold accent */
+#sideMenu a {
+    font-size: 100%;
+    color: #b7d4e8;
+    transition: all 0.2s ease;
+}
+
+#sideMenu a:hover {
+    background: linear-gradient(90deg, rgba(237, 181, 72, 0.25) 0%, rgba(237, 181, 72, 0.05) 100%);
+    color: #ffe98d;
+}
+
+#sideMenu a:active {
+    background: linear-gradient(90deg, rgba(237, 181, 72, 0.35) 0%, rgba(237, 181, 72, 0.1) 100%);
+}
+
+#sideMenu a.selected {
+    color: #ffe98d;
+    background: linear-gradient(90deg, rgba(237, 181, 72, 0.3) 0%, rgba(237, 181, 72, 0.05) 100%);
+    border-right: 3px solid #edb548;
+    box-shadow: inset 0 0 12px rgba(237, 181, 72, 0.2);
+}
+
+/* Form Inputs - Beveled inset style */
+input[type=text],
+input[type=password],
+input[type=url],
+input[type=number],
+input[type=email],
+input[type=search],
+select,
+textarea,
+.popupTrigger {
+    background: linear-gradient(180deg, #152538 0%, #1a2d4a 100%);
+    border: 2px solid #3d5a80;
+    border-radius: 6px;
+    color: #ffffff;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=url]:focus,
+input[type=number]:focus,
+input[type=email]:focus,
+input[type=search]:focus,
+select:focus,
+textarea:focus,
+.popupTrigger:focus {
+    border-color: #edb548;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4), 0 0 8px rgba(237, 181, 72, 0.5);
+}
+
+select option {
+    background: #243a5c;
+    color: #ffffff;
+}
+
+/* Settings Groups - Card style with depth */
+.settingsGroup .groupBody .settingContainer {
+    background: linear-gradient(180deg, #2a4468 0%, #243a5c 100%);
+    border: 2px solid #3d5a80;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.settingsGroup:hover .groupBody:hover .settingContainer:hover {
+    border-color: #edb548;
+    box-shadow: 0 6px 20px rgba(237, 181, 72, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.scheduleTriggerInfo {
+    border: 2px solid #3d5a80;
+    background: linear-gradient(180deg, #2a4468 0%, #243a5c 100%);
+}
+
+.splitViewInfo.splitViewInfo {
+    background: linear-gradient(180deg, #1e3250 0%, #1a2d4a 100%);
+}
+
+@media screen and (max-width: 1000px) {
+    #sideMenuContainer {
+        background: linear-gradient(180deg, #243a5c 0%, #1e3250 100%);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #statusActions > div:nth-child(2) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    .DisplayMetricHeader .circleChart {
+        display: none;
+    }
+}
+
+/* App Status - Bright and cheerful */
+.AppStatus, .listenPort > .AppStatus {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(180deg, rgba(237, 181, 72, 0.3) 0%, rgba(237, 181, 72, 0.15) 100%);
+    border: 2px solid #edb548;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffe98d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Buttons - Bold beveled gold with 3D effect */
+button,
+input[type=button],
+input[type=submit],
+.button {
+    background: linear-gradient(180deg, #f5c962 0%, #edb548 50%, #d4a23c 100%) !important;
+    border: 2px solid #816632 !important;
+    border-top-color: #ffe98d !important;
+    border-left-color: #ffe98d !important;
+    color: #2a1f0a !important;
+    font-weight: 700;
+    border-radius: 8px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover,
+.button:hover {
+    background: linear-gradient(180deg, #ffe98d 0%, #f5c962 50%, #edb548 100%) !important;
+    box-shadow: 0 6px 12px rgba(237, 181, 72, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+button:active,
+input[type=button]:active,
+input[type=submit]:active,
+.button:active {
+    background: linear-gradient(180deg, #d4a23c 0%, #c4923a 50%, #b88530 100%) !important;
+    border-top-color: #816632 !important;
+    border-left-color: #816632 !important;
+    border-bottom-color: #ffe98d !important;
+    border-right-color: #ffe98d !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+}
+
+.tabHeaderContainer .tabHeader.active {
+    background: linear-gradient(180deg, #f5c962 0%, #edb548 50%, #d4a23c 100%) !important;
+    color: #2a1f0a !important;
+    border: 2px solid #816632;
+    border-top-color: #ffe98d;
+    box-shadow: 0 2px 6px rgba(237, 181, 72, 0.4);
+}
+
+/* Color Variants - More vibrant */
+.bgBlue {
+    background: linear-gradient(180deg, rgba(61, 130, 189, 0.4) 0%, rgba(34, 91, 139, 0.3) 100%) !important;
+    border: 2px solid #5a9fd4 !important;
+    color: #bfe6ff !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+.bgBlue:hover {
+    background: linear-gradient(180deg, rgba(61, 130, 189, 0.5) 0%, rgba(34, 91, 139, 0.4) 100%) !important;
+    box-shadow: 0 4px 8px rgba(90, 159, 212, 0.3);
+}
+
+.bgRed {
+    background: linear-gradient(180deg, rgba(255, 80, 80, 0.35) 0%, rgba(200, 50, 50, 0.25) 100%) !important;
+    border: 2px solid #ff6b6b !important;
+    color: #ffb3b3 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+.bgRed:hover {
+    background: linear-gradient(180deg, rgba(255, 80, 80, 0.5) 0%, rgba(200, 50, 50, 0.4) 100%) !important;
+    box-shadow: 0 4px 8px rgba(255, 107, 107, 0.3);
+}
+
+.bgPink {
+    background: linear-gradient(180deg, rgba(230, 160, 100, 0.35) 0%, rgba(210, 136, 73, 0.25) 100%) !important;
+    border: 2px solid #e6a864 !important;
+    color: #ffd4a8 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+.bgPink:hover {
+    background: linear-gradient(180deg, rgba(230, 160, 100, 0.5) 0%, rgba(210, 136, 73, 0.4) 100%) !important;
+}
+
+.bgPurple {
+    background: linear-gradient(180deg, rgba(100, 110, 220, 0.35) 0%, rgba(71, 82, 196, 0.25) 100%) !important;
+    border: 2px solid #7b86e0 !important;
+    color: #c5caff !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+.bgPurple:hover {
+    background: linear-gradient(180deg, rgba(100, 110, 220, 0.5) 0%, rgba(71, 82, 196, 0.4) 100%) !important;
+}
+
+.bgGray {
+    background: linear-gradient(180deg, rgba(100, 120, 150, 0.35) 0%, rgba(80, 100, 130, 0.25) 100%) !important;
+    border: 2px solid #6a8aa8 !important;
+    color: #c5d8e8 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+.bgGray:hover {
+    background: linear-gradient(180deg, rgba(100, 120, 150, 0.5) 0%, rgba(80, 100, 130, 0.4) 100%) !important;
+}
+
+.bgGreen {
+    background: linear-gradient(180deg, rgba(70, 180, 90, 0.35) 0%, rgba(35, 134, 54, 0.25) 100%) !important;
+    border: 2px solid #4ade80 !important;
+    color: #a8ffc0 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+.bgGreen:hover {
+    background: linear-gradient(180deg, rgba(70, 180, 90, 0.5) 0%, rgba(35, 134, 54, 0.4) 100%) !important;
+    box-shadow: 0 4px 8px rgba(74, 222, 128, 0.3);
+}
+
+.bgAmber {
+    background: linear-gradient(180deg, rgba(255, 200, 100, 0.35) 0%, rgba(237, 181, 72, 0.25) 100%) !important;
+    border: 2px solid #ffc864 !important;
+    color: #fff0c0 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+.bgAmber:hover {
+    background: linear-gradient(180deg, rgba(255, 200, 100, 0.5) 0%, rgba(237, 181, 72, 0.4) 100%) !important;
+}
+
+/* Display Metrics - Raised card style */
+.DisplayMetric {
+    background: linear-gradient(180deg, #2a4468 0%, #243a5c 100%);
+    border: 2px solid #3d5a80 !important;
+    border-top-color: #4a6a90 !important;
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.25s ease;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.DisplayMetric:hover {
+    border-color: #edb548 !important;
+    box-shadow: 0 8px 24px rgba(237, 181, 72, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.DisplayMetric.bgGreen,
+.DisplayMetric.bgBlue,
+.DisplayMetric.bgPurple,
+.DisplayMetric.bgRed,
+.DisplayMetric.bgGray,
+.DisplayMetric.bgAmber {
+    background: linear-gradient(180deg, #2a4468 0%, #243a5c 100%) !important;
+    border: 2px solid #3d5a80 !important;
+    border-top-color: #4a6a90 !important;
+    color: #b7d4e8 !important;
+}
+
+.DisplayMetric.bgGreen {
+    border-left: 6px solid #26d96c !important;
+}
+
+.DisplayMetric.bgBlue {
+    border-left: 6px solid #5a9fd4 !important;
+}
+
+.DisplayMetric.bgPurple {
+    border-left: 6px solid #a35adf !important;
+}
+
+.DisplayMetric.bgRed {
+    border-left: 6px solid #ff6b6b !important;
+}
+
+.DisplayMetric.bgGray,
+.DisplayMetric.bgAmber {
+    border-left: 6px solid #edb548 !important;
+}
+
+.DisplayMetric .bgGreen,
+.DisplayMetric .bgBlue,
+.DisplayMetric .bgPurple,
+.DisplayMetric .bgRed,
+.DisplayMetric .bgGray,
+.DisplayMetric .bgAmber {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+#AMP_Core_MetricsDisplay {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.DisplayMetric .DisplayMetricHeader {
+    background: none !important;
+    margin-bottom: 16px;
+    position: relative;
+    min-height: 82px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.DisplayMetric .DisplayMetricGraph {
+    height: 96px;
+    margin-top: 10px;
+}
+
+.DisplayMetricHeader .circleChart {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.DisplayMetric .DisplayMetricHeader > :nth-child(1) {
+    font-size: 12px;
+    font-weight: 700;
+    color: #8fb8d9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    max-width: 62%;
+}
+
+.DisplayMetric .DisplayMetricHeader > :nth-child(2) {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #ffe98d;
+    max-width: 68%;
+    word-break: break-word;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Status Actions - Raised panels */
+#statusActions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 18px;
+    align-items: stretch;
+}
+
+#statusActions > * {
+    transition: all 0.25s ease;
+}
+
+#statusActions > div {
+    background: linear-gradient(180deg, #2a4468 0%, #243a5c 100%);
+    border: 2px solid #3d5a80;
+    border-top-color: #4a6a90;
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 150px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+#statusActions > div:hover {
+    box-shadow: 0 8px 24px rgba(237, 181, 72, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+#statusActions > div > h2 {
+    display: flex;
+    align-items: center;
+    min-height: 28px;
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 2px solid #3d5a80;
+    color: #ffe98d;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    background: transparent;
+    margin: -4px 0 16px 0;
+    padding: 0 0 12px 0;
+}
+
+/* Ports - Interactive list items */
+#AMP_Core_Ports {
+    width: 100%;
+}
+
+#AMP_Core_Ports > div > .listenPort {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    column-gap: 12px;
+    align-items: center;
+}
+
+.listenPort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    background: linear-gradient(180deg, #1e3250 0%, #1a2d4a 100%);
+    border: 1px solid #3d5a80;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.listenPort:hover {
+    background: linear-gradient(180deg, #2a4468 0%, #1e3250 100%);
+    border-color: #edb548;
+    box-shadow: 0 4px 12px rgba(237, 181, 72, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transform: translateY(-1px);
+}
+
+div[data-viewmodel*="DiagnosticsVM"] > .listenPort > span:nth-child(1) {
+    color: #b7d4e8;
+}
+
+div[data-viewmodel*="DiagnosticsVM"] > .listenPort > span:nth-child(2) {
+    color: #ffe98d;
+    text-shadow: 0 0 8px rgba(237, 181, 72, 0.5);
+}
+
+.listenPort > .AppStatus.bgGray {
+    background: rgba(106, 138, 168, 0.16) !important;
+    border: 1px solid #6a8aa8 !important;
+    color: #c5d8e8 !important;
+    box-shadow: none;
+}
+
+.listenPort > .AppStatus.bgRed {
+    background: rgba(255, 107, 107, 0.16) !important;
+    border: 1px solid #ff6b6b !important;
+    color: #ffb3b3 !important;
+    box-shadow: none;
+}
+
+.listenPort > .AppStatus.bgGreen {
+    background: rgba(74, 222, 128, 0.16) !important;
+    border: 1px solid #4ade80 !important;
+    color: #a8ffc0 !important;
+    box-shadow: none;
+}
+
+.listenPort > .AppStatus {
+    min-width: 92px;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    line-height: 1;
+    text-shadow: none;
+}
+
+span[data-bind*="text: Name"] {
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+span[data-bind*="text: Port"] {
+    color: #8fb8d9;
+}
+
+span[data-bind*="text: ProtocolName"] {
+    background: linear-gradient(180deg, rgba(237, 181, 72, 0.3) 0%, rgba(237, 181, 72, 0.15) 100%);
+    border: 1px solid #edb548;
+    border-radius: 4px;
+    padding: 5px 8px;
+    min-width: 42px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #ffe98d;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Instance Action Buttons - Beveled style */
+.InstanceList .ServerEntry .ServerEntryActions button,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton {
+    background: linear-gradient(180deg, #3d5a80 0%, #2a4468 100%) !important;
+    border: 2px solid #4a6a90 !important;
+    border-bottom-color: #1e3250 !important;
+    border-right-color: #1e3250 !important;
+    color: #ffffff !important;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.InstanceList .ServerEntry .ServerEntryActions button:hover,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton:hover {
+    background: linear-gradient(180deg, #4a6a90 0%, #3d5a80 100%) !important;
+    border-color: #edb548 !important;
+    box-shadow: 0 4px 8px rgba(237, 181, 72, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+    transform: translateY(-1px);
+}
+
+.InstanceList .ServerEntry .ServerEntryActions button .mat-icon,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton .mat-icon {
+    color: #b7d4e8 !important;
+}
+
+.InstanceList .ServerEntry .ServerEntryActions button:hover .mat-icon,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton:hover .mat-icon {
+    color: #ffe98d !important;
+}
+
+.InstanceList .ServerEntry .ServerEntryActions button.bgRed,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton.bgRed {
+    background: linear-gradient(180deg, rgba(255, 100, 100, 0.4) 0%, rgba(200, 50, 50, 0.3) 100%) !important;
+    border-color: #ff6b6b !important;
+}
+
+.InstanceList .ServerEntry .ServerEntryActions button.bgGreen,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton.bgGreen {
+    background: linear-gradient(180deg, rgba(100, 200, 100, 0.4) 0%, rgba(35, 134, 54, 0.3) 100%) !important;
+    border-color: #4ade80 !important;
+}
+
+/* Server Groups - Rich card styling */
+.ServerGroup {
+    background-image: none !important;
+    background: linear-gradient(180deg, #2a4468 0%, #1e3250 100%);
+    border: 2px solid #3d5a80;
+    border-top-color: #4a6a90;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.ServerGroup:hover {
+    border-color: #4a6a90;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.ServerGroupHeader {
+    background: linear-gradient(180deg, #2a4468 0%, #243a5c 100%) !important;
+    border-bottom: 2px solid #3d5a80;
+    border-radius: 10px 10px 0 0;
+}
+
+.ServerGroupActions {
+    border-top: 2px solid #3d5a80;
+    background: linear-gradient(180deg, #1e3250 0%, #1a2d4a 100%) !important;
+    border-radius: 0 0 10px 10px;
+}
+
+.ServerGroupName > span {
+    color: #ffe98d;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.SystemInfo {
+    color: #8fb8d9 !important;
+}
+
+.InstanceList .ServerEntry {
+    height: auto !important;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(36, 58, 92, 0.96) 0%, rgba(30, 50, 80, 0.96) 100%) !important;
+    border: 1px solid #3d5a80;
+    border-left-width: 6px;
+    border-left-style: solid;
+    border-left-color: #3d5a80;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28);
+    transition: all 0.25s ease;
+}
+
+.InstanceList .ServerEntry:hover {
+    border-color: #4a6a90;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(237, 181, 72, 0.12);
+    transform: translateY(-2px);
+}
+
+.InstanceList .ServerEntry::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(90deg, rgba(20, 34, 54, 0.22) 0%, rgba(20, 34, 54, 0.72) 46%, rgba(20, 34, 54, 0.9) 100%);
+}
+
+.InstanceList .ServerEntry.bgGreen {
+    border-left-color: #26d96c !important;
+}
+
+.InstanceList .ServerEntry:has(.ServerEntryStatus.bgGreen) {
+    border-left-color: #26d96c !important;
+}
+
+.InstanceList .ServerEntry.bgGray,
+.InstanceList .ServerEntry.bgInfo {
+    border-left-color: #5a7fa8 !important;
+}
+
+.InstanceList .ServerEntry:has(.ServerEntryStatus.bgGray),
+.InstanceList .ServerEntry:has(.ServerEntryStatus.bgInfo) {
+    border-left-color: #5a7fa8 !important;
+}
+
+.InstanceList .ServerEntry.bgRed {
+    border-left-color: #ff6b6b !important;
+}
+
+.InstanceList .ServerEntry:has(.ServerEntryStatus.bgRed) {
+    border-left-color: #ff6b6b !important;
+}
+
+/* New Server Entry - Inviting dashed gold */
+.InstanceList .ServerEntry.NewServerEntry {
+    background: linear-gradient(180deg, rgba(237, 181, 72, 0.15) 0%, rgba(237, 181, 72, 0.05) 100%) !important;
+    border: 3px dashed #edb548 !important;
+    border-radius: 12px;
+}
+
+.InstanceList .ServerEntry.NewServerEntry:hover {
+    background: linear-gradient(180deg, rgba(237, 181, 72, 0.25) 0%, rgba(237, 181, 72, 0.1) 100%) !important;
+    border-color: #ffe98d !important;
+    box-shadow: 0 4px 16px rgba(237, 181, 72, 0.3);
+}
+
+.InstanceList .ServerEntry.NewServerEntry .ServerEntryHeader {
+    color: #edb548;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Server Entry - Layered depth */
+.ServerEntryTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 58px;
+    padding: 10px 14px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(180deg, rgba(42, 68, 104, 0.9) 0%, rgba(36, 58, 92, 0.86) 100%);
+    border-bottom: 1px solid #3d5a80;
+}
+
+h3[data-bind*="text: friendlyname"] {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h5[data-bind*="text: endpoint"] {
+    font-size: 12px;
+    font-family: 'Courier New', monospace;
+    font-weight: 400;
+    color: #8fb8d9;
+}
+
+.ServerEntryStatus.bgGreen {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(180deg, rgba(70, 200, 70, 0.4) 0%, rgba(35, 134, 54, 0.25) 100%);
+    border: 2px solid #4ade80;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #a8ffc0;
+    box-shadow: 0 0 8px rgba(74, 222, 128, 0.3);
+}
+
+.ServerEntryStatus.bgRed {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(180deg, rgba(255, 100, 100, 0.4) 0%, rgba(200, 50, 50, 0.25) 100%);
+    border: 2px solid #ff6b6b;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffb3b3;
+    box-shadow: 0 0 8px rgba(255, 107, 107, 0.3);
+}
+
+.ServerEntryStatus.bgGray {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(180deg, rgba(106, 138, 168, 0.32) 0%, rgba(74, 106, 144, 0.2) 100%);
+    border: 2px solid #6a8aa8;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #c5d8e8;
+    box-shadow: 0 0 8px rgba(106, 138, 168, 0.25);
+}
+
+.ServerEntryStatus.bgInfo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(180deg, rgba(237, 181, 72, 0.4) 0%, rgba(237, 181, 72, 0.2) 100%);
+    border: 2px solid #edb548;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffe98d;
+    box-shadow: 0 0 8px rgba(237, 181, 72, 0.3);
+}
+
+.ServerEntryMetrics {
+    padding: 10px 14px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(96px, 1fr));
+    gap: 8px;
+    background: linear-gradient(180deg, rgba(30, 50, 80, 0.95) 0%, rgba(26, 45, 74, 0.9) 100%);
+}
+
+.InstanceList .ServerEntry .ServerEntryInfo {
+    padding: 0 !important;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(180deg, rgba(30, 50, 80, 0.98) 0%, rgba(26, 45, 74, 0.96) 100%);
+    border-top: 1px solid #3d5a80;
+}
+
+.InstanceList .ServerEntry .ServerEntryInfo h2,
+.InstanceList .ServerEntry .ServerEntryInfo h4 {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.InstanceList .ServerEntry .ServerEntryInfo p {
+    color: #b7d4e8 !important;
+}
+
+.InstanceList .ServerEntry .ServerEntryActions {
+    margin: 0 !important;
+    margin-top: 0 !important;
+    position: static !important;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 14px;
+    min-height: 54px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(61, 90, 128, 0.45);
+    z-index: 2;
+    background: linear-gradient(180deg, rgba(30, 50, 80, 0.98) 0%, rgba(26, 45, 74, 0.96) 100%);
+}
+
+.InstanceList .ServerEntry .ServerEntryInfo p,
+.InstanceList .ServerEntry .ServerEntryInfo .Notice {
+    background: linear-gradient(180deg, rgba(26, 45, 74, 0.8) 0%, rgba(21, 37, 56, 0.7) 100%) !important;
+    border: 1px solid #3d5a80;
+    color: #b7d4e8 !important;
+    border-radius: 8px;
+    margin: 8px 12px !important;
+    padding: 10px 12px !important;
+    line-height: 1.4;
+    text-shadow: none;
+}
+
+.InstanceList .ServerEntry .ServerEntryMetrics {
+    text-align: center;
+    background: linear-gradient(180deg, rgba(30, 50, 80, 0.98) 0%, rgba(26, 45, 74, 0.96) 100%) !important;
+    border-top: 1px solid #3d5a80;
+    padding: 10px 14px;
+    position: relative;
+    z-index: 2;
+}
+
+.InstanceList .ServerEntry .ServerEntryMetrics .ServerEntryMetric {
+    flex-direction: column;
+    background: rgba(10, 18, 30, 0.78) !important;
+    border: 1px solid rgba(61, 90, 128, 0.45);
+    border-radius: 8px;
+    padding: 8px 10px;
+    box-sizing: border-box;
+}
+
+.InstanceList .ServerEntry .ServerEntryMetrics .ServerEntryMetric .mat-icon {
+    margin: 0 !important;
+    color: #edb548 !important;
+    filter: drop-shadow(0 0 4px rgba(237, 181, 72, 0.5));
+}
+
+.InstanceList .ServerEntry .ServerEntryMetrics .ServerEntryMetric .MetricText h3 {
+    font-size: 11px;
+    font-weight: 600;
+    color: #8fb8d9;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+    text-shadow: none;
+}
+
+.InstanceList .ServerEntry .ServerEntryMetrics .ServerEntryMetric .MetricText .MetricValue {
+    font-weight: 700;
+    color: #ffffff !important;
+    text-shadow: none;
+}
+
+.InstanceList .ServerEntry .ServerEntryImage {
+    filter: saturate(0.86) brightness(0.74) contrast(0.95) !important;
+    opacity: 0.62;
+}
+
+.InstanceList .ServerEntry .ServerEntryImage.Blur {
+    filter: blur(12px) saturate(0.86) brightness(0.68) contrast(0.95) !important;
+}
+
+.InstanceList .ServerEntry .ServerEntryActions button,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    min-height: 38px;
+    padding: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* File Manager - Clean hierarchy */
+#fileManagerList {
+    background: linear-gradient(180deg, #243a5c 0%, #1e3250 100%);
+    border: 2px solid #3d5a80;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.fileManagerEntry {
+    border-bottom: 1px solid #3d5a80 !important;
+}
+
+.fileManagerEntry:hover {
+    background: linear-gradient(90deg, rgba(237, 181, 72, 0.15) 0%, transparent 100%) !important;
+}
+
+.fileManagerEntry.selected {
+    background: linear-gradient(90deg, rgba(237, 181, 72, 0.25) 0%, rgba(237, 181, 72, 0.05) 100%) !important;
+    border-left: 4px solid #edb548 !important;
+}
+
+.fileEntryTitle {
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.fileManagerEntry .fileEntrySubtitle {
+    color: #8fb8d9 !important;
+}
+
+.fmPathSegment {
+    color: #8fb8d9;
+}
+
+.fmPathSegment:hover {
+    color: #ffe98d;
+    text-shadow: 0 0 8px rgba(237, 181, 72, 0.5);
+}
+
+.fmPathSegment + .fmPathSegment::before {
+    color: #4a6a90;
+}
+
+#fileManagerInfo {
+    background: linear-gradient(180deg, #243a5c 0%, #1e3250 100%);
+    border: 2px solid #3d5a80;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#fileManagerInfo h3 {
+    color: #ffe98d;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#fileManagerInfo th {
+    color: #8fb8d9;
+}
+
+#fileManagerInfo td {
+    color: #ffffff;
+}
+
+/* Code Editor */
+#editorContainer {
+    border-top: 2px solid #3d5a80;
+}
+
+.ace-ambiance .ace_gutter {
+    background: linear-gradient(90deg, #1a2d4a 0%, #1e3250 100%) !important;
+    border-right: 2px solid #3d5a80 !important;
+}
+
+.ace_folding-enabled > .ace_gutter-cell {
+    color: #8fb8d9 !important;
+}
+
+/* Context Menu - Elevated */
+.contextMenu.contextMenu {
+    border-radius: 12px;
+    background: linear-gradient(180deg, #2a4468 0%, #243a5c 100%) !important;
+    border: 2px solid #3d5a80 !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.wizardTab .wizardContents h2 {
+    background: linear-gradient(180deg, #1e3250 0%, #1a2d4a 100%) !important;
+    border-bottom: 2px solid #3d5a80;
+    color: #ffe98d;
+}
+
+.contextMenu.contextMenu .flexButtonGroup {
+    background: linear-gradient(180deg, #243a5c 0%, #1e3250 100%);
+}
+
+/* Datastore - Card style */
+.datastoreItem {
+    background: linear-gradient(180deg, #2a4468 0%, #243a5c 100%) !important;
+    border: 2px solid #3d5a80 !important;
+    border-top-color: #4a6a90 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.datastoreItem h3 {
+    border-bottom: 2px solid #3d5a80;
+    color: #ffe98d;
+    background: linear-gradient(180deg, rgba(237, 181, 72, 0.1) 0%, transparent 100%);
+}
+
+.datastoreItem:hover {
+    border-color: #edb548 !important;
+    box-shadow: 0 8px 24px rgba(237, 181, 72, 0.2) !important;
+    transform: translateY(-2px);
+}
+
+.wizardTab .wizardContents {
+    background: linear-gradient(180deg, #243a5c 0%, #1e3250 100%) !important;
+    border: 2px solid #3d5a80 !important;
+}
+
+/* Schedule */
+.scheduleTriggerInfo {
+    background: linear-gradient(180deg, #2a4468 0%, #243a5c 100%) !important;
+    border: 2px solid #3d5a80 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.scheduleTriggerInfo:hover {
+    border-color: #edb548 !important;
+    box-shadow: 0 8px 24px rgba(237, 181, 72, 0.2) !important;
+}
+
+.scheduleTriggerDescription {
+    background: linear-gradient(180deg, #1e3250 0%, #1a2d4a 100%) !important;
+    border-bottom: 2px solid #3d5a80;
+}
+
+.scheduleTriggerHeaderItem .scheduleHeader {
+    color: #ffe98d;
+}
+
+.scheduleTriggerTask {
+    border-bottom: 1px solid #3d5a80;
+}
+
+/* Links - Warm gold */
+a {
+    color: #edb548;
+    text-shadow: 0 0 0 transparent;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: #ffe98d;
+    text-shadow: 0 0 8px rgba(237, 181, 72, 0.5);
+}
+
+/* Scrollbar - Styled */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(90deg, #1a2d4a 0%, #1e3250 100%);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #4a6a90 0%, #3d5a80 100%);
+    border-radius: 5px;
+    border: 2px solid #1a2d4a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #edb548 0%, #d4a23c 100%);
+}
