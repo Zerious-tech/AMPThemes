@@ -3,8 +3,6 @@
    Custom dashboard design by Tumeden
    Dark modern interface inspired by Discord aesthetics
    ================================ */
-
-
 /* Base Background */
 body {
     background: #0f0f23;
@@ -257,17 +255,7 @@ input.searchBox {
     }
 }
 
-@media screen and (max-width: 1200px) {
-    #statusActions > div:nth-child(2) {
-        display: none;
-    }
-}
 
-@media screen and (max-width: 1450px) {
-    .DisplayMetricHeader .circleChart {
-        display: none;
-    }
-}
 
 /* App Status */
 .AppStatus, .listenPort > .AppStatus {
@@ -402,74 +390,6 @@ input[type=submit]:active,
 }
 .bgAmber:active {
     background-color: rgba(251, 133, 0, 0.1) !important;
-}
-
-/* Display Metrics */
-.DisplayMetric {
-    background: rgba(22, 27, 34, 0.6);
-    backdrop-filter: blur(10px);
-    border: 1px solid #30363d !important;
-    border-radius: 16px;
-    padding: 24px;
-    transition: all 0.3s ease;
-    flex-direction: column;
-    box-sizing: border-box;
-}
-
-.DisplayMetric:hover {
-    transform: translateY(-4px);
-    border-color: #5865F2;
-    box-shadow: 0 12px 24px rgba(88, 101, 242, 0.2);
-}
-
-#AMP_Core_MetricsDisplay {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    margin-bottom: 24px;
-}
-
-.DisplayMetric .DisplayMetricHeader {
-    background: none !important;
-    margin-bottom: 20px;
-    position: relative;
-    min-height: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.DisplayMetric .DisplayMetricGraph {
-    height: 100px;
-    margin-top: 12px;
-}
-
-.DisplayMetricHeader .circleChart {
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 1;
-    pointer-events: none;
-}
-
-.DisplayMetric .DisplayMetricHeader > :nth-child(1) {
-    font-size: 11px;
-    color: #8b949e;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-    max-width: 60%;
-}
-
-.DisplayMetric .DisplayMetricHeader > :nth-child(2) {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 0;
-    color: #f0f6fc;
-    line-height: 1.1;
-    max-width: 65%;
-    word-break: break-word;
 }
 
 /* Status Actions */
@@ -1346,4 +1266,23 @@ a:hover {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #21262d;
+}
+
+/* Managed status connection info cleanup */
+#statusActions > div:nth-child(2) > :empty,
+#statusActions > div:nth-child(2) input[value=""],
+#statusActions > div:nth-child(2) .endpoint:empty,
+#statusActions > div:nth-child(2) .Endpoint:empty {
+    display: none !important;
+    min-height: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+#statusActions > div:nth-child(2) > div:empty + div:empty {
+    display: none !important;
 }

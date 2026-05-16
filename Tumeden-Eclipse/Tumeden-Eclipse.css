@@ -295,17 +295,7 @@ select option {
     }
 }
 
-@media screen and (max-width: 1200px) {
-    #statusActions > div:nth-child(2) {
-        display: none;
-    }
-}
 
-@media screen and (max-width: 1450px) {
-    .DisplayMetricHeader .circleChart {
-        display: none;
-    }
-}
 
 /* App Status - Muted eclipse badge */
 .AppStatus, .listenPort > .AppStatus {
@@ -477,118 +467,6 @@ input[type=submit]:active,
 }
 .bgAmber:hover {
     background: linear-gradient(180deg, rgba(125, 244, 234, 0.34) 0%, rgba(48, 213, 200, 0.4) 100%) !important;
-}
-
-/* Display Metrics - Crisp cards */
-.DisplayMetric {
-    background: linear-gradient(180deg, #20364a 0%, #192a3a 100%);
-    border: 2px solid #2f5f73 !important;
-    border-radius: 12px;
-    padding: 20px;
-    transition: all 0.25s ease;
-    flex-direction: column;
-    box-sizing: border-box;
-    overflow: hidden;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
-}
-
-.DisplayMetric:hover {
-    border-color: #30d5c8 !important;
-    box-shadow: 0 0 0 1px rgba(48, 213, 200, 0.22), 0 10px 24px rgba(0, 0, 0, 0.32);
-    transform: translateY(-2px);
-}
-
-.DisplayMetric.bgGreen,
-.DisplayMetric.bgBlue,
-.DisplayMetric.bgPurple,
-.DisplayMetric.bgRed,
-.DisplayMetric.bgGray,
-.DisplayMetric.bgAmber {
-    background: linear-gradient(180deg, #20364a 0%, #192a3a 100%) !important;
-    border: 2px solid #2f5f73 !important;
-    color: #b7e6ea !important;
-}
-
-.DisplayMetric.bgGreen {
-    border-left: 6px solid #26d96c !important;
-}
-
-.DisplayMetric.bgBlue {
-    border-left: 6px solid #5a9fd4 !important;
-}
-
-.DisplayMetric.bgPurple {
-    border-left: 6px solid #a35adf !important;
-}
-
-.DisplayMetric.bgRed {
-    border-left: 6px solid #ff6b6b !important;
-}
-
-.DisplayMetric.bgGray,
-.DisplayMetric.bgAmber {
-    border-left: 6px solid #30d5c8 !important;
-}
-
-.DisplayMetric .bgGreen,
-.DisplayMetric .bgBlue,
-.DisplayMetric .bgPurple,
-.DisplayMetric .bgRed,
-.DisplayMetric .bgGray,
-.DisplayMetric .bgAmber {
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-}
-
-#AMP_Core_MetricsDisplay {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 18px;
-    margin-bottom: 24px;
-}
-
-.DisplayMetric .DisplayMetricHeader {
-    background: none !important;
-    margin-bottom: 16px;
-    position: relative;
-    min-height: 82px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.DisplayMetric .DisplayMetricGraph {
-    height: 96px;
-    margin-top: 10px;
-}
-
-.DisplayMetricHeader .circleChart {
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 1;
-    pointer-events: none;
-}
-
-.DisplayMetric .DisplayMetricHeader > :nth-child(1) {
-    font-size: 12px;
-    font-weight: 700;
-    color: #8ccdd8;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-    max-width: 62%;
-}
-
-.DisplayMetric .DisplayMetricHeader > :nth-child(2) {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 1.1;
-    color: #e9fbff;
-    max-width: 68%;
-    word-break: break-word;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Status Actions - Crisp panels */
@@ -1434,4 +1312,23 @@ a.bgRed:hover,
     border-color: rgba(179, 106, 114, 0.86) !important;
     color: #ffd2d5 !important;
     box-shadow: inset 0 -2px 0 rgba(179, 106, 114, 0.22), 0 0 10px rgba(194, 95, 107, 0.16) !important;
+}
+
+/* Managed status connection info cleanup */
+#statusActions > div:nth-child(2) > :empty,
+#statusActions > div:nth-child(2) input[value=""],
+#statusActions > div:nth-child(2) .endpoint:empty,
+#statusActions > div:nth-child(2) .Endpoint:empty {
+    display: none !important;
+    min-height: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+#statusActions > div:nth-child(2) > div:empty + div:empty {
+    display: none !important;
 }
