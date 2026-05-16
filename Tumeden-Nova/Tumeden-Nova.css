@@ -1,0 +1,1514 @@
+/* ================================
+   Tumeden Nova AMP Theme
+   Custom dashboard design by Tumeden
+   Dark interface with cyan accents, subtle violet depth, and clean dashboard styling
+   ================================ */
+
+/* Base Background */
+body {
+    background: linear-gradient(180deg, #101923 0%, #070b12 100%);
+}
+
+/* Containers */
+#loginContainer,
+.sideItemList,
+#sideMenuContainer,
+#barTop,
+.tabHeaderContainer {
+    background: linear-gradient(180deg, #192a3a 0%, #142333 100%);
+    border-bottom: 1px solid #2f5f73;
+}
+
+.subMenuWell {
+    background: transparent;
+}
+
+@media screen and (max-width: 660px) {
+    #sideMenuContainer .subMenuWell.appear {
+        background: #192a3a;
+    }
+
+    .hiddenOnMobile {
+        display: none !important;
+    }
+}
+
+/* Side Menu */
+#sideMenuContainer {
+    border-right: 2px solid #2f5f73;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.3);
+}
+
+#sideMenu .heroImage {
+    border-bottom: 2px solid #30d5c8;
+}
+
+.menuTitle {
+    border-bottom: 2px solid #2f5f73;
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: 700;
+    color: #e9fbff;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(180deg, #20364a 0%, #142333 100%);
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#sideMenu a.padBottom {
+    border-bottom: none;
+}
+
+.sideItemList {
+    background: linear-gradient(180deg, #142333 0%, #101b28 100%);
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-left: 1px solid #2f5f73;
+}
+
+#userInfo {
+    border-bottom: 3px solid #30d5c8;
+    background: linear-gradient(180deg, #192a3a 0%, #142333 100%);
+    position: relative;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 16px;
+    overflow: visible;
+    box-shadow: inset 0 -1px 0 rgba(48, 213, 200, 0.08);
+}
+
+#userInfo::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #1aa399 0%, #30d5c8 25%, #e9fbff 50%, #30d5c8 75%, #1aa399 100%);
+    box-shadow: 0 0 8px rgba(48, 213, 200, 0.6), 0 0 16px rgba(48, 213, 200, 0.3);
+}
+
+#userInfo,
+#userInfo a,
+#userInfo span {
+    color: #b7e6ea;
+}
+
+#bgtext {
+    margin-top: auto;
+    padding: 16px 20px;
+    border-top: 1px solid #2f5f73;
+    font-size: 12px;
+    color: #8ccdd8;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Top Bar */
+#barTop {
+    border-bottom: 3px solid #30d5c8;
+    background: linear-gradient(180deg, #20364a 0%, #192a3a 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 250px;
+    right: 0;
+    z-index: 100;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0 4px 0;
+    box-sizing: border-box;
+}
+
+#barTop::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #1aa399 0%, #30d5c8 25%, #e9fbff 50%, #30d5c8 75%, #1aa399 100%);
+    box-shadow: 0 0 8px rgba(48, 213, 200, 0.6), 0 0 16px rgba(48, 213, 200, 0.3);
+}
+
+#barTop #tabInfo h2 {
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+#barTop #tabInfo h4 {
+    color: #8ccdd8;
+    margin: 0;
+}
+
+#barTop #tabInfo.remoteInfo h2 {
+    margin: 0;
+}
+
+#barTop #topSearchBox {
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+    margin: 0 32px;
+}
+
+#barTop #topSearchBox input.searchBox {
+    width: 100%;
+    padding: 10px 40px 10px 16px;
+    background: linear-gradient(180deg, #101923 0%, #0c141d 100%);
+    border: 2px solid #2f5f73;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    box-shadow: 0 0 0 1px rgba(48, 213, 200, 0.08);
+    outline: none;
+}
+
+#barTop #topSearchBox input.searchBox::placeholder {
+    color: #6f9eb0;
+}
+
+#barTop #topSearchBox input:focus {
+    background: linear-gradient(180deg, #142333 0%, #101923 100%);
+    border-color: #30d5c8;
+    box-shadow: 0 0 0 1px rgba(48, 213, 200, 0.22), 0 0 10px rgba(48, 213, 200, 0.16);
+}
+
+#barTop #topSearchBox .icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8ccdd8;
+}
+
+@media screen and (max-width: 1000px) {
+    #barTop {
+        left: 0;
+        width: 100%;
+        padding-left: 0;
+    }
+}
+
+/* Main Body */
+#mainBody {
+    background: linear-gradient(180deg, #101923 0%, #070b12 100%);
+    top: 57px;
+}
+
+/* Side Menu Links */
+#sideMenu a {
+    font-size: 100%;
+    color: #b7e6ea;
+    transition: all 0.2s ease;
+}
+
+#sideMenu a:hover {
+    background: linear-gradient(90deg, rgba(48, 213, 200, 0.25) 0%, rgba(48, 213, 200, 0.05) 100%);
+    color: #e9fbff;
+}
+
+#sideMenu a:active {
+    background: linear-gradient(90deg, rgba(48, 213, 200, 0.35) 0%, rgba(48, 213, 200, 0.1) 100%);
+}
+
+#sideMenu a.selected {
+    color: #e9fbff;
+    background: linear-gradient(90deg, rgba(48, 213, 200, 0.3) 0%, rgba(48, 213, 200, 0.05) 100%);
+    border-right: 3px solid #30d5c8;
+    box-shadow: inset 0 0 12px rgba(48, 213, 200, 0.2);
+}
+
+/* Form Inputs */
+input[type=text],
+input[type=password],
+input[type=url],
+input[type=number],
+input[type=email],
+input[type=search],
+select,
+textarea,
+.popupTrigger {
+    background: linear-gradient(180deg, #0c141d 0%, #101923 100%);
+    border: 2px solid #2f5f73;
+    border-radius: 6px;
+    color: #ffffff;
+    box-shadow: 0 0 0 1px rgba(48, 213, 200, 0.08);
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=url]:focus,
+input[type=number]:focus,
+input[type=email]:focus,
+input[type=search]:focus,
+select:focus,
+textarea:focus,
+.popupTrigger:focus {
+    border-color: #30d5c8;
+    box-shadow: 0 0 0 1px rgba(48, 213, 200, 0.24), 0 0 10px rgba(48, 213, 200, 0.18);
+}
+
+select option {
+    background: #192a3a;
+    color: #ffffff;
+}
+
+/* Settings Groups */
+.settingsGroup .groupBody .settingContainer {
+    background: linear-gradient(180deg, #20364a 0%, #192a3a 100%);
+    border: 2px solid #2f5f73;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+}
+
+.settingsGroup:hover .groupBody:hover .settingContainer:hover {
+    border-color: #30d5c8;
+    box-shadow: 0 6px 20px rgba(48, 213, 200, 0.25);
+    transform: translateY(-2px);
+}
+
+.scheduleTriggerInfo {
+    border: 2px solid #2f5f73;
+    background: linear-gradient(180deg, #20364a 0%, #192a3a 100%);
+}
+
+.splitViewInfo.splitViewInfo {
+    background: linear-gradient(180deg, #142333 0%, #101923 100%);
+}
+
+@media screen and (max-width: 1000px) {
+    #sideMenuContainer {
+        background: linear-gradient(180deg, #192a3a 0%, #142333 100%);
+    }
+}
+
+/* App Status */
+.AppStatus {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(14, 30, 42, 0.88);
+    border: 1px solid rgba(111, 158, 176, 0.48);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #cfe8ed;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-shadow: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+}
+
+/* Buttons */
+button,
+input[type=button],
+input[type=submit],
+.button {
+    background: linear-gradient(180deg, #1b3447 0%, #142637 100%) !important;
+    border: 1px solid #2f5f73 !important;
+    color: #e9fbff !important;
+    font-weight: 700;
+    border-radius: 7px;
+    text-shadow: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
+}
+
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover,
+.button:hover {
+    background: linear-gradient(180deg, #20394b 0%, #172c3d 100%) !important;
+    border-color: #3a7486 !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.32);
+    transform: translateY(-1px);
+}
+
+button:active,
+input[type=button]:active,
+input[type=submit]:active,
+.button:active {
+    background: #10202e !important;
+    border-color: #1aa399 !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+    transform: translateY(0);
+}
+
+.tabHeaderContainer .tabHeader.active {
+    background: linear-gradient(180deg, #20364a 0%, #142333 100%) !important;
+    color: #e9fbff !important;
+    border: 1px solid #30d5c8;
+    border-bottom: 3px solid #30d5c8;
+    box-shadow: 0 0 14px rgba(48, 213, 200, 0.22);
+}
+
+.tabHeaderContainer .tabHeader {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, #192a3a 0%, #142333 100%) !important;
+    background-color: transparent !important;
+    background-image: linear-gradient(180deg, #192a3a 0%, #142333 100%) !important;
+    background-size: auto !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    border: 1px solid #2f5f73;
+    color: #b7e6ea !important;
+}
+
+.tabHeaderContainer .tabHeader::before,
+.tabHeaderContainer .tabHeader::after {
+    content: none !important;
+    display: none !important;
+}
+
+.tabHeaderContainer .tabHeader .mat-icon,
+.tabHeaderContainer .tabHeader .icon {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+    min-height: 18px !important;
+    font-size: 18px !important;
+    line-height: 18px !important;
+    opacity: 0.45;
+}
+
+.tabHeaderContainer .tabHeader [class*=Icon],
+.tabHeaderContainer .tabHeader [class*=icon],
+.tabHeaderContainer .tabHeader img,
+.tabHeaderContainer .tabHeader svg {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Color Variants */
+.bgBlue {
+    background: linear-gradient(180deg, rgba(61, 130, 189, 0.4) 0%, rgba(34, 91, 139, 0.3) 100%) !important;
+    border: 2px solid #5a9fd4 !important;
+    color: #bfe6ff !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+}
+.bgBlue:hover {
+    background: linear-gradient(180deg, rgba(61, 130, 189, 0.5) 0%, rgba(34, 91, 139, 0.4) 100%) !important;
+    box-shadow: 0 0 12px rgba(90, 159, 212, 0.18);
+}
+
+.bgRed {
+    background: linear-gradient(180deg, rgba(255, 80, 80, 0.35) 0%, rgba(200, 50, 50, 0.25) 100%) !important;
+    border: 2px solid #ff6b6b !important;
+    color: #ffb3b3 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+}
+.bgRed:hover {
+    background: linear-gradient(180deg, rgba(255, 80, 80, 0.5) 0%, rgba(200, 50, 50, 0.4) 100%) !important;
+    box-shadow: 0 0 12px rgba(255, 107, 107, 0.18);
+}
+
+.bgPink {
+    background: linear-gradient(180deg, rgba(48, 213, 200, 0.24) 0%, rgba(26, 163, 153, 0.16) 100%) !important;
+    border: 2px solid #30d5c8 !important;
+    color: #e9fbff !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+}
+.bgPink:hover {
+    background: linear-gradient(180deg, rgba(48, 213, 200, 0.34) 0%, rgba(26, 163, 153, 0.24) 100%) !important;
+}
+
+.bgPurple {
+    background: linear-gradient(180deg, rgba(100, 110, 220, 0.35) 0%, rgba(71, 82, 196, 0.25) 100%) !important;
+    border: 2px solid #7b86e0 !important;
+    color: #c5caff !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+}
+.bgPurple:hover {
+    background: linear-gradient(180deg, rgba(100, 110, 220, 0.5) 0%, rgba(71, 82, 196, 0.4) 100%) !important;
+}
+
+.bgGray {
+    background: linear-gradient(180deg, rgba(100, 120, 150, 0.35) 0%, rgba(80, 100, 130, 0.25) 100%) !important;
+    border: 2px solid #6f9eb0 !important;
+    color: #c5d8e8 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+}
+.bgGray:hover {
+    background: linear-gradient(180deg, rgba(100, 120, 150, 0.5) 0%, rgba(80, 100, 130, 0.4) 100%) !important;
+}
+
+.bgGreen {
+    background: linear-gradient(180deg, rgba(70, 180, 90, 0.35) 0%, rgba(35, 134, 54, 0.25) 100%) !important;
+    border: 2px solid #4ade80 !important;
+    color: #a8ffc0 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+}
+.bgGreen:hover {
+    background: linear-gradient(180deg, rgba(70, 180, 90, 0.5) 0%, rgba(35, 134, 54, 0.4) 100%) !important;
+    box-shadow: 0 0 12px rgba(74, 222, 128, 0.18);
+}
+
+.bgAmber {
+    background: linear-gradient(180deg, rgba(125, 244, 234, 0.22) 0%, rgba(48, 213, 200, 0.25) 100%) !important;
+    border: 2px solid #30d5c8 !important;
+    color: #e9fbff !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+}
+.bgAmber:hover {
+    background: linear-gradient(180deg, rgba(125, 244, 234, 0.34) 0%, rgba(48, 213, 200, 0.4) 100%) !important;
+}
+
+.ServerEntryActions > button:first-child,
+.ServerEntryActions > button:first-child[style*="none"] + button {
+    border-radius: 8px 0 0 8px;
+}
+
+.ServerEntryActions > button:last-child,
+.ServerEntryActions > button:nth-child(7) {
+    border-radius: 0 8px 8px 0;
+}
+
+/* Instance Action Buttons */
+.InstanceList .ServerEntry .ServerEntryActions button,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton {
+    background: #132234 !important;
+    border: 1px solid #2f5f73 !important;
+    box-shadow: none !important;
+    backdrop-filter: none;
+    color: #e9fbff !important;
+    transition: all 0.12s ease;
+    border-radius: 8px;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    padding: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.InstanceList .ServerEntry .ServerEntryActions button:hover,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton:hover {
+    background: #172b42 !important;
+    border-color: #00e5ff !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25) !important;
+    transform: translateY(-1px);
+}
+
+.InstanceList .ServerEntry .ServerEntryActions button .mat-icon,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton .mat-icon {
+    color: #8fe8f2 !important;
+    font-size: 18px;
+}
+
+.InstanceList .ServerEntry .ServerEntryActions button:hover .mat-icon,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton:hover .mat-icon {
+    color: #e9fbff !important;
+}
+
+.InstanceList .ServerEntry .ServerEntryActions button.bgRed,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton.bgRed {
+    background: #48202d !important;
+    border-color: rgba(239, 111, 136, 0.76) !important;
+}
+
+.InstanceList .ServerEntry .ServerEntryActions button.bgRed:hover,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton.bgRed:hover {
+    background: rgba(239, 111, 136, 0.18) !important;
+    border-color: #ef6f88 !important;
+}
+
+.InstanceList .ServerEntry .ServerEntryActions button.bgGreen,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton.bgGreen {
+    background: #123f42 !important;
+    border-color: rgba(39, 215, 198, 0.78) !important;
+}
+
+.InstanceList .ServerEntry .ServerEntryActions button.bgGreen:hover,
+.InstanceList .ServerEntry .ServerEntryActions .iconButton.bgGreen:hover {
+    background: rgba(39, 215, 198, 0.18) !important;
+    border-color: #27d7c6 !important;
+}
+
+/* Server Groups */
+.ServerGroup {
+    background-image: none !important;
+    background: rgba(24, 38, 58, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid #2f5f73;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.ServerGroup:hover {
+    border-color: #3a7486;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.ServerGroupHeader {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: rgba(7, 10, 16, 0.3) !important;
+    border-bottom: 1px solid #2f5f73;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.ServerGroupName {
+    width: 100%;
+}
+
+.ServerGroupActions {
+    border-top: 1px solid #2f5f73;
+    background: #111927 !important;
+    padding: 20px 24px;
+    margin: 0 !important;
+    align-items: center;
+    gap: 16px;
+}
+
+.ServerGroupName > span {
+    padding-top: 16px;
+    padding-left: 24px;
+    padding-bottom: 20px;
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    color: #e9fbff;
+    text-shadow: none;
+}
+
+.SystemInfo {
+    color: #8ccdd8 !important;
+}
+
+.InstanceList .ServerEntry {
+    height: auto !important;
+    position: relative;
+    overflow: hidden;
+    background: rgba(24, 38, 58, 0.6) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid #2f5f73;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.InstanceList .ServerEntry:hover {
+    border-color: #3a7486;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    outline: none !important;
+    transform: translateY(-4px);
+}
+
+.InstanceList .ServerEntry::before {
+    content: none;
+}
+
+/* New Server Entry */
+.InstanceList .ServerEntry.NewServerEntry {
+    background: rgba(0, 229, 255, 0.1) !important;
+    border: 2px dashed rgba(0, 229, 255, 0.5) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-direction: column-reverse;
+}
+
+.InstanceList .ServerEntry.NewServerEntry span {
+    line-height: 50% !important;
+}
+
+.InstanceList .ServerEntry.NewServerEntry:hover {
+    background: rgba(0, 229, 255, 0.15) !important;
+    border-color: #00e5ff !important;
+}
+
+.InstanceList .ServerEntry.NewServerEntry .ServerEntryHeader {
+    background: none !important;
+    font-size: 16px;
+    margin: 0 !important;
+    text-shadow: none !important;
+    color: #00e5ff;
+}
+
+.ServerEntryTop {
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(24, 38, 58, 0.6);
+    position: relative;
+    z-index: 1;
+    border-bottom: 1px solid rgba(73, 132, 169, 0.3);
+    min-height: 48px;
+    box-sizing: border-box;
+}
+
+h3[data-bind*="text: friendlyname"] {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #e9fbff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.ServerEntryHeader > h5:nth-child(2) {
+    display: none;
+}
+
+h5[data-bind*="text: endpoint"] {
+    font-size: 12px;
+    color: #8fb4c2;
+    font-family: 'Courier New', monospace;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    font-weight: 400;
+}
+
+.ServerEntryStatus.bgGreen {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(39, 215, 198, 0.1);
+    border: 1px solid rgba(39, 215, 198, 0.3);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #27d7c6;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.ServerEntryStatus.bgGreen > .mat-icon {
+    color: transparent !important;
+    text-shadow: none;
+    pointer-events: none;
+    width: 8px;
+    height: 8px;
+    background: #27d7c6;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.ServerEntryStatus.bgRed {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(239, 111, 136, 0.1);
+    border: 1px solid rgba(239, 111, 136, 0.3);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #ef6f88;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.ServerEntryStatus.bgRed > .mat-icon {
+    color: transparent !important;
+    text-shadow: none;
+    pointer-events: none;
+    width: 8px;
+    height: 8px;
+    background: #ef6f88;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.ServerEntryStatus.bgGray {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(143, 180, 194, 0.1);
+    border: 1px solid rgba(143, 180, 194, 0.3);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #8fb4c2;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.ServerEntryStatus.bgInfo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0, 229, 255, 0.1);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #00e5ff;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.ServerEntryStatus.bgGray > .mat-icon {
+    color: transparent !important;
+    text-shadow: none;
+    pointer-events: none;
+    width: 8px;
+    height: 8px;
+    background: #8fb4c2;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.ServerEntryStatus.bgInfo > .mat-icon {
+    color: transparent !important;
+    text-shadow: none;
+    pointer-events: none;
+    width: 8px;
+    height: 8px;
+    background: #00e5ff;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.InstanceList .ServerEntry .ServerEntryTop .ServerEntryStatus .mat-icon {
+    margin: 0 0 0 4px;
+}
+
+.ServerEntryMetrics {
+    padding: 12px 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    background: rgba(24, 38, 58, 0.7);
+}
+
+.InstanceList .ServerEntry .ServerEntryInfo {
+    padding: 0 !important;
+    position: relative;
+    z-index: 1;
+    background: rgba(24, 38, 58, 0.7);
+    backdrop-filter: blur(4px);
+    border-top: 1px solid rgba(73, 132, 169, 0.3);
+}
+
+.InstanceList .ServerEntry .ServerEntryInfo h2,
+.InstanceList .ServerEntry .ServerEntryInfo h4 {
+    color: #e9fbff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.InstanceList .ServerEntry .ServerEntryInfo p {
+    color: #8fb4c2 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.InstanceList .ServerEntry .ServerEntryActions {
+    margin: 0 !important;
+    margin-top: 0 !important;
+    position: static !important;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    background: rgba(24, 38, 58, 0.7);
+    backdrop-filter: blur(4px);
+    border-radius: 0;
+    padding: 12px 24px;
+    border-top: none;
+    z-index: auto;
+    min-height: 48px;
+    box-sizing: border-box;
+}
+
+.InstanceList .ServerEntry .ServerEntryInfo p,
+.InstanceList .ServerEntry .ServerEntryInfo .Notice {
+    background: rgba(24, 38, 58, 0.5) !important;
+    backdrop-filter: blur(2px);
+    padding: 12px 16px !important;
+    border-radius: 6px;
+    margin: 8px 12px !important;
+    color: #8fb4c2 !important;
+    line-height: 1.5;
+    text-shadow: none;
+    border: 1px solid rgba(73, 132, 169, 0.2);
+}
+
+.InstanceList .ServerEntry .ServerEntryImage {
+    filter: none !important;
+    position: relative;
+    z-index: 0;
+}
+
+.InstanceList .ServerEntry .ServerEntryImage.Blur {
+    filter: blur(16px) !important;
+}
+
+.InstanceList .ServerEntry .ServerEntryTop,
+.InstanceList .ServerEntry .ServerEntryInfo,
+.InstanceList .ServerEntry .ServerEntryMetrics {
+    position: relative;
+    z-index: 2;
+}
+
+.InstanceList .ServerEntry .ServerEntryMetrics {
+    text-align: center;
+    background: rgba(24, 38, 58, 0.7) !important;
+    backdrop-filter: blur(4px);
+    border-top: 1px solid rgba(73, 132, 169, 0.3);
+    padding: 12px 24px;
+}
+
+.InstanceList .ServerEntry .ServerEntryMetrics .ServerEntryMetric {
+    flex-direction: column;
+    background: none !important;
+}
+
+.InstanceList .ServerEntry .ServerEntryMetrics .ServerEntryMetric .mat-icon {
+    margin: 0 !important;
+    color: #8fb4c2 !important;
+}
+
+.InstanceList .ServerEntry .ServerEntryMetrics .ServerEntryMetric .MetricText h3 {
+    font-size: 11px;
+    color: #8fb4c2;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    margin-bottom: 4px;
+    text-shadow: none;
+    font-weight: 600;
+}
+
+.InstanceList .ServerEntry .ServerEntryMetrics .ServerEntryMetric .MetricText .MetricValue {
+    color: #e9fbff !important;
+    text-shadow: none;
+    font-weight: 700;
+}
+
+.InstanceList .ServerEntry .ServerEntryInfo h2, 
+.InstanceList .ServerEntry .ServerEntryInfo h4 {
+    font-size: 16px;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+    color: #e9fbff !important;
+}
+
+/* File Manager */
+#fileManagerList {
+    background: linear-gradient(180deg, #192a3a 0%, #142333 100%);
+    border: 2px solid #2f5f73;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.fileManagerEntry {
+    border-bottom: 1px solid #2f5f73 !important;
+}
+
+.fileManagerEntry:hover {
+    background: linear-gradient(90deg, rgba(48, 213, 200, 0.15) 0%, transparent 100%) !important;
+}
+
+.fileManagerEntry.selected {
+    background: linear-gradient(90deg, rgba(48, 213, 200, 0.25) 0%, rgba(48, 213, 200, 0.05) 100%) !important;
+    border-left: 4px solid #30d5c8 !important;
+}
+
+.fileEntryTitle {
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.fileManagerEntry .fileEntrySubtitle {
+    color: #8ccdd8 !important;
+}
+
+.fmPathSegment {
+    color: #8ccdd8;
+}
+
+.fmPathSegment:hover {
+    color: #e9fbff;
+    text-shadow: none;
+}
+
+.fmPathSegment + .fmPathSegment::before {
+    color: #3a7486;
+}
+
+#fileManagerInfo {
+    background: linear-gradient(180deg, #192a3a 0%, #142333 100%);
+    border: 2px solid #2f5f73;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#fileManagerInfo h3 {
+    color: #e9fbff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#fileManagerInfo th {
+    color: #8ccdd8;
+}
+
+#fileManagerInfo td {
+    color: #ffffff;
+}
+
+/* Code Editor */
+#editorContainer {
+    border-top: 2px solid #2f5f73;
+}
+
+.ace-ambiance .ace_gutter {
+    background: linear-gradient(90deg, #101923 0%, #142333 100%) !important;
+    border-right: 2px solid #2f5f73 !important;
+}
+
+.ace_folding-enabled > .ace_gutter-cell {
+    color: #8ccdd8 !important;
+}
+
+/* Context Menu */
+.contextMenu.contextMenu {
+    border-radius: 12px;
+    background: linear-gradient(180deg, #20364a 0%, #192a3a 100%) !important;
+    border: 2px solid #2f5f73 !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.wizardTab .wizardContents h2 {
+    background: linear-gradient(180deg, #142333 0%, #101923 100%) !important;
+    border-bottom: 2px solid #2f5f73;
+    color: #e9fbff;
+}
+
+.contextMenu.contextMenu .flexButtonGroup {
+    background: linear-gradient(180deg, #192a3a 0%, #142333 100%);
+}
+
+/* Datastore */
+.datastoreItem {
+    background: linear-gradient(180deg, #20364a 0%, #192a3a 100%) !important;
+    border: 2px solid #2f5f73 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+}
+
+.datastoreItem h3 {
+    border-bottom: 2px solid #2f5f73;
+    color: #e9fbff;
+    background: linear-gradient(180deg, rgba(48, 213, 200, 0.1) 0%, transparent 100%);
+}
+
+.datastoreItem:hover {
+    border-color: #30d5c8 !important;
+    box-shadow: 0 8px 24px rgba(48, 213, 200, 0.2) !important;
+    transform: translateY(-2px);
+}
+
+.wizardTab .wizardContents {
+    background: linear-gradient(180deg, #192a3a 0%, #142333 100%) !important;
+    border: 2px solid #2f5f73 !important;
+}
+
+/* Schedule */
+.scheduleTriggerInfo {
+    background: linear-gradient(180deg, #20364a 0%, #192a3a 100%) !important;
+    border: 2px solid #2f5f73 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.scheduleTriggerInfo:hover {
+    border-color: #30d5c8 !important;
+    box-shadow: 0 8px 24px rgba(48, 213, 200, 0.2) !important;
+}
+
+.scheduleTriggerDescription {
+    background: linear-gradient(180deg, #142333 0%, #101923 100%) !important;
+    border-bottom: 2px solid #2f5f73;
+}
+
+.scheduleTriggerHeaderItem .scheduleHeader {
+    color: #e9fbff;
+}
+
+.scheduleTriggerTask {
+    border-bottom: 1px solid #2f5f73;
+}
+
+/* Links */
+a {
+    color: #30d5c8;
+    text-shadow: 0 0 0 transparent;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: #e9fbff;
+    text-shadow: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(90deg, #101923 0%, #142333 100%);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #3a7486 0%, #2f5f73 100%);
+    border-radius: 5px;
+    border: 2px solid #101923;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #30d5c8 0%, #1aa399 100%);
+}
+
+
+button.bgGreen,
+input.bgGreen,
+a.bgGreen,
+.button.bgGreen,
+.bgGreen.button {
+    background: linear-gradient(180deg, #162f31 0%, #0d2022 100%) !important;
+    border-color: rgba(92, 141, 134, 0.74) !important;
+    color: #c0d8d4 !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+button.bgGreen:hover,
+input.bgGreen:hover,
+a.bgGreen:hover,
+.button.bgGreen:hover,
+.bgGreen.button:hover {
+    background: linear-gradient(180deg, #1b3939 0%, #102729 100%) !important;
+    border-color: rgba(120, 162, 156, 0.82) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.34) !important;
+}
+
+button.bgRed,
+input.bgRed,
+a.bgRed,
+.button.bgRed,
+.bgRed.button {
+    background: linear-gradient(180deg, #351d23 0%, #211319 100%) !important;
+    border-color: rgba(142, 82, 91, 0.74) !important;
+    color: #d7b3b5 !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+button.bgRed:hover,
+input.bgRed:hover,
+a.bgRed:hover,
+.button.bgRed:hover,
+.bgRed.button:hover {
+    background: linear-gradient(180deg, #43242b 0%, #29161c 100%) !important;
+    border-color: rgba(164, 100, 109, 0.82) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.34) !important;
+}
+
+
+
+/* Nova Variables */
+:root {
+    --nova-bg: #070a10;
+    --nova-panel: #111927;
+    --nova-panel-2: #172235;
+    --nova-panel-3: #1d2d44;
+    --nova-border: #274d68;
+    --nova-cyan: #00e5ff;
+    --nova-blue: #3b82f6;
+    --nova-soft: #9ee8f2;
+    --nova-text: #eefaff;
+    --nova-muted: #8fb4c2;
+    --nova-running: #27d7c6;
+    --nova-offline: #ef6f88;
+}
+
+body {
+    font-family: Inter, "Segoe UI", "Noto Sans", Arial, sans-serif;
+    background:
+        radial-gradient(circle at 16% 0%, rgba(0, 229, 255, 0.12), transparent 30%),
+        radial-gradient(circle at 86% 10%, rgba(59, 130, 246, 0.14), transparent 34%),
+        linear-gradient(180deg, #090d14 0%, #070a10 52%, #05070b 100%) !important;
+    color: var(--nova-text);
+}
+
+#loginContainer,
+.sideItemList,
+#sideMenuContainer,
+#barTop,
+.tabHeaderContainer {
+    background: linear-gradient(180deg, #162235 0%, #101927 100%) !important;
+    border-color: var(--nova-border) !important;
+}
+
+#sideMenuContainer {
+    border-right: 2px solid rgba(0, 229, 255, 0.38) !important;
+    box-shadow: 2px 0 18px rgba(0, 0, 0, 0.36), inset -1px 0 0 rgba(0, 229, 255, 0.12) !important;
+}
+
+#userInfo,
+#barTop {
+    border-bottom-color: var(--nova-cyan) !important;
+    background: linear-gradient(180deg, #19263a 0%, #111b2a 100%) !important;
+}
+
+#userInfo::after,
+#barTop::after {
+    background: linear-gradient(90deg, #1373ff 0%, #00e5ff 28%, #f4fdff 50%, #00e5ff 72%, #1373ff 100%) !important;
+    box-shadow: 0 0 8px rgba(0, 229, 255, 0.58), 0 0 18px rgba(59, 130, 246, 0.32) !important;
+}
+
+#barTop #tabInfo h2,
+.menuTitle {
+    color: #f4fdff !important;
+    letter-spacing: 0;
+}
+
+#barTop #tabInfo h4,
+#bgtext,
+.SystemInfo {
+    color: var(--nova-muted) !important;
+}
+
+.menuTitle {
+    background:
+        linear-gradient(90deg, rgba(0, 229, 255, 0.08), transparent 30%, rgba(59, 130, 246, 0.08)),
+        linear-gradient(180deg, #1b2a40 0%, #111b2a 100%) !important;
+    border-bottom-color: rgba(0, 229, 255, 0.36) !important;
+}
+
+#sideMenu .heroImage {
+    border-bottom-color: var(--nova-cyan) !important;
+    filter: saturate(1.08) contrast(1.02);
+}
+
+#sideMenu a,
+#sideMenu .sideMenuItem,
+.sideMenuItem {
+    color: #bed8e0 !important;
+}
+
+#sideMenu a:hover,
+.sideMenuItem:hover {
+    background: linear-gradient(90deg, rgba(0, 229, 255, 0.13), rgba(59, 130, 246, 0.05), transparent) !important;
+    color: #f4fdff !important;
+}
+
+#sideMenu a.selected,
+.sideMenuItem.selected,
+#sideMenu .selected {
+    background: linear-gradient(90deg, rgba(0, 229, 255, 0.2), rgba(59, 130, 246, 0.08), transparent) !important;
+    border-right-color: var(--nova-cyan) !important;
+    box-shadow: inset 0 0 16px rgba(0, 229, 255, 0.14) !important;
+    color: #ffffff !important;
+}
+
+#barTop #topSearchBox input.searchBox,
+input[type=text],
+input[type=password],
+textarea,
+select {
+    background: linear-gradient(180deg, #0c121d 0%, #090e16 100%) !important;
+    border-color: rgba(73, 132, 169, 0.72) !important;
+    color: #f4fdff !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 0 0 1px rgba(0, 229, 255, 0.05) !important;
+}
+
+#barTop #topSearchBox input.searchBox:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+textarea:focus,
+select:focus {
+    border-color: rgba(0, 229, 255, 0.82) !important;
+    box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.2), 0 0 16px rgba(0, 229, 255, 0.12) !important;
+}
+
+button,
+input[type=button],
+input[type=submit],
+.button {
+    background: linear-gradient(180deg, #17263a 0%, #0e1724 100%) !important;
+    border: 1px solid rgba(74, 133, 169, 0.76) !important;
+    border-radius: 6px !important;
+    color: #e9fbff !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.32) !important;
+}
+
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover,
+.button:hover {
+    background: linear-gradient(180deg, #1c3149 0%, #111f31 100%) !important;
+    border-color: rgba(0, 229, 255, 0.72) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.34), 0 0 12px rgba(0, 229, 255, 0.1) !important;
+}
+
+.tabHeaderContainer .tabHeader {
+    background: linear-gradient(180deg, #121d2d 0%, #0e1724 100%) !important;
+    border-color: rgba(73, 132, 169, 0.7) !important;
+    color: #bcd7df !important;
+    border-radius: 6px 6px 0 0 !important;
+}
+
+.tabHeaderContainer .tabHeader.active {
+    background: linear-gradient(180deg, #1b2c42 0%, #111d2e 100%) !important;
+    border-color: rgba(0, 229, 255, 0.86) !important;
+    border-bottom-color: var(--nova-cyan) !important;
+    color: #f4fdff !important;
+    box-shadow: 0 0 14px rgba(0, 229, 255, 0.14) !important;
+}
+
+.statusCard,
+.wizardContents,
+.datastoreItem,
+.scheduleTriggerInfo,
+#fileManagerList {
+    background: linear-gradient(180deg, rgba(24, 38, 58, 0.96) 0%, rgba(15, 24, 37, 0.98) 100%) !important;
+    border-color: rgba(73, 132, 169, 0.62) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.32) !important;
+}
+
+button.bgGreen,
+input.bgGreen,
+a.bgGreen,
+.button.bgGreen,
+.bgGreen.button {
+    background: linear-gradient(180deg, #123f42 0%, #0b262b 100%) !important;
+    border-color: rgba(39, 215, 198, 0.78) !important;
+    color: #dffffb !important;
+}
+
+button.bgRed,
+input.bgRed,
+a.bgRed,
+.button.bgRed,
+.bgRed.button {
+    background: linear-gradient(180deg, #48202d 0%, #2a1420 100%) !important;
+    border-color: rgba(239, 111, 136, 0.76) !important;
+    color: #ffdbe2 !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #247b99 0%, #1b4d7a 100%) !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #00e5ff 0%, #3b82f6 100%) !important;
+}
+
+
+/* Background */
+body {
+    background:
+        radial-gradient(ellipse at 18% 12%, rgba(253, 143, 91, 0.14), transparent 28%),
+        radial-gradient(ellipse at 75% 8%, rgba(130, 76, 204, 0.14), transparent 30%),
+        radial-gradient(ellipse at 44% 92%, rgba(64, 145, 255, 0.16), transparent 34%),
+        radial-gradient(circle at 18% 76%, rgba(0, 229, 255, 0.1), transparent 24%),
+        linear-gradient(135deg, #070a10 0%, #10152b 42%, #221942 66%, #071018 100%) !important;
+}
+
+body::before,
+body::after {
+    display: none !important;
+    content: none !important;
+}
+
+#mainBody {
+    background-image:
+        radial-gradient(ellipse at 72% 16%, rgba(130, 76, 204, 0.14), transparent 30%),
+        radial-gradient(ellipse at 22% 86%, rgba(0, 229, 255, 0.11), transparent 28%),
+        linear-gradient(135deg, rgba(253, 143, 91, 0.07), transparent 26%),
+        linear-gradient(150deg, transparent 0 42%, rgba(94, 166, 255, 0.07) 43% 54%, transparent 55%) !important;
+    background-repeat: no-repeat;
+    background-position: right top, left bottom, left top, center center;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+#sideMenu .heroImage,
+.InstanceList .ServerEntry .ServerEntryImage {
+    background-image:
+        radial-gradient(ellipse at 30% 18%, rgba(255, 160, 96, 0.22), transparent 26%),
+        radial-gradient(ellipse at 70% 18%, rgba(120, 82, 205, 0.2), transparent 28%),
+        linear-gradient(135deg, rgba(22, 42, 65, 0.85), rgba(8, 16, 27, 0.94)) !important;
+}
+
+.AppStatus,
+.ServerEntryStatus {
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+}
+
+
+/* Content Containers */
+.InstanceList,
+.ServerEntry,
+.ServerGroup,
+.DatastoreList,
+.datastoreItem,
+#datastoreList,
+.statusCard,
+#fileManagerList {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.InstanceList,
+.DatastoreList,
+#datastoreList,
+#fileManagerList {
+    display: block;
+}
+
+
+/* Status Actions */
+#statusActions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    align-items: stretch;
+    margin-top: 18px;
+}
+
+#statusActions > div {
+    background: linear-gradient(180deg, rgba(24, 38, 58, 0.84) 0%, rgba(13, 22, 36, 0.9) 100%) !important;
+    border: 1px solid rgba(73, 132, 169, 0.58) !important;
+    border-radius: 8px;
+    padding: 18px;
+    min-height: 178px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(2px);
+}
+
+#statusActions > div:hover {
+    border-color: rgba(0, 229, 255, 0.44) !important;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.34);
+}
+
+#statusActions > div > h2 {
+    margin: 0 0 14px 0;
+    padding: 0 0 12px 0;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.24);
+    color: #eefaff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+#statusActions button,
+#statusActions .button {
+    margin-right: 8px;
+}
+
+#AMP_Core_Ports {
+    width: 100%;
+}
+
+#AMP_Core_Ports > div > .listenPort,
+.listenPort {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    column-gap: 12px;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    background: rgba(7, 14, 24, 0.54) !important;
+    border: 1px solid rgba(73, 132, 169, 0.46) !important;
+    border-radius: 7px;
+}
+
+.listenPort:hover {
+    background: rgba(13, 27, 42, 0.62) !important;
+    border-color: rgba(0, 229, 255, 0.36) !important;
+}
+
+.listenPort > .AppStatus {
+    min-width: 104px;
+    justify-content: center;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    line-height: 1;
+}
+
+.listenPort > .AppStatus.bgGreen {
+    background: linear-gradient(180deg, rgba(21, 76, 73, 0.94) 0%, rgba(9, 38, 40, 0.96) 100%) !important;
+    border-color: rgba(39, 215, 198, 0.78) !important;
+    color: #dffffb !important;
+}
+
+.listenPort > .AppStatus.bgRed {
+    background: linear-gradient(180deg, rgba(75, 33, 45, 0.95) 0%, rgba(38, 16, 26, 0.97) 100%) !important;
+    border-color: rgba(239, 111, 136, 0.76) !important;
+    color: #ffdbe2 !important;
+}
+
+.listenPort > .AppStatus.bgGray {
+    background: rgba(18, 31, 43, 0.9) !important;
+    border-color: rgba(111, 158, 176, 0.5) !important;
+    color: #c5d8e8 !important;
+}
+
+span[data-bind*="text: Name"],
+span[data-bind*="text: Port"] {
+    color: #d8f2f7;
+}
+
+span[data-bind*="text: ProtocolName"],
+.ProtocolName {
+    background: rgba(8, 17, 28, 0.84) !important;
+    border: 1px solid rgba(0, 229, 255, 0.35) !important;
+    border-radius: 5px;
+    padding: 5px 8px;
+    color: #cceff5 !important;
+}
+
+
+/* Connection Info */
+#statusActions > div:nth-child(2) > :empty,
+#statusActions > div:nth-child(2) input[value=""],
+#statusActions > div:nth-child(2) .endpoint:empty,
+#statusActions > div:nth-child(2) .Endpoint:empty {
+    display: none !important;
+    min-height: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+#statusActions > div:nth-child(2) > div:empty + div:empty {
+    display: none !important;
+}
